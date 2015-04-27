@@ -32,7 +32,7 @@ router.post('/login', function(req, res) {
 				console.log("Error Selecting : %s ", err);
 			for ( var i in rows) {
 				if (i == 0) {
-					res.redirect('/');
+					res.redirect('/home');
 				}
 				else{
 					res.redirect('/login');
