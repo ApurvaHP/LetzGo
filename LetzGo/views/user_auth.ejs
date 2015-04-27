@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, width=device-width" name="viewport">
+	<title>Sign Up | Login</title>
+
+	<link href="css/base.min.css" rel="stylesheet">
+
+	<style>
+
+		.hr-line {
+		    margin: 24px 0;
+		}
+
+		.hr-line {
+		-moz-border-bottom-colors: none;
+		-moz-border-left-colors: none;
+		-moz-border-right-colors: none;
+		-moz-border-top-colors: none;
+		border-color: #999999 -moz-use-text-color -moz-use-text-color;
+		border-color: #999999;
+		border-image: none;
+		border-right: medium none;
+		border-style: solid none none;
+		border-width: 1px medium medium;
+		margin: 12px 0;
+		text-align: center;
+		}
+
+		legend{
+			font-size:14px;
+			font-weight: normal;
+			color:#696969;
+		}
+
+		.twitter-hover {
+			background-image: url("images/twitter-hover.png");
+		}
+
+		.facebook-hover {
+			background-image: url("images/facebook-hover.png");
+		}
+
+		.google-hover {
+			background-image: url("images/google-hover.png");
+		}
+
+		.social-slide {
+			//background-image: url("images/twitter-hover.png");
+			height: 48px;
+			width: 232px;
+			margin: 10px auto;
+			//float: left;
+			-webkit-transition: all ease 0.3s;
+			-moz-transition: all ease 0.3s;
+			-o-transition: all ease 0.3s;
+			-ms-transition: all ease 0.3s;
+			transition: all ease 0.3s;
+		}
+		.social-slide:hover {
+			background-position: 0px -48px;
+			box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
+		}
+	</style>
+
+</head>
+<body style="margin-bottom: 73px;">
+
+				<header class="header">
+					<div class="clearfix pull-left">
+						<ul class="nav nav-list pull-left">
+							<li>
+								<a class="menu-toggle" href="#menu">
+									<span class="access-hide">Menu</span>
+									<span class="icon icon-menu"></span>
+									<span class="header-close icon icon-close"></span>
+								</a>
+							</li>
+						</ul>
+						<a class="header-logo" href="index.html">Lets Go!!</a>
+					</div>
+					<div class="clearfix pull-right">
+						<ul class="nav nav-list pull-right">
+							<li>
+								<a class="menu-toggle" href="#profile">
+									<span class="access-hide">User</span>
+									<span class="avatar avatar-sm"><img alt="alt text for User avatar" src="images/users/avatar-001.jpg"></span>
+									<span class="header-close icon icon-close"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</header>
+
+				<nav class="menu" id="menu">
+					<div class="menu-scroll">
+						<div class="menu-wrap">
+							<div class="menu-content">
+								<ul class="nav">
+									<li class="active">
+										<a href="ui-card.html">Menu Item 1</a>
+									</li>
+									<li>
+										<a href="ui-collapse.html">Menu Item 2</a>
+									</li>
+									<li>
+										<a href="ui-dropdown.html">Menu Item 3</a>
+									</li>
+									<li>
+										<a href="ui-modal.html">Menu Item 4</a>
+									</li>
+									<li>
+										<a href="ui-tab.html">Menu Item 5</a>
+									</li>
+									<li>
+										<a href="ui-tile.html">Menu Item 6</a>
+									</li>
+								</ul>
+
+								<hr>
+								<ul class="nav">
+									<li>
+										<a href="page-palette.html">Menu Main</a>
+										<span class="menu-collapse-toggle collapsed" data-target="#page-palettes" data-toggle="collapse"><i class="icon icon-close menu-collapse-toggle-close"></i><i class="icon icon-add menu-collapse-toggle-default"></i></span>
+										<ul class="menu-collapse collapse" id="page-palettes">
+											<li>
+												<a href="#">Sub-Menu</a>
+											</li>
+											<li>
+												<a href="#">Sub-Menu 2</a>
+											</li>
+											<li>
+												<a href="#">Sub Menu 3</a>
+											</li>
+											<li>
+												<a href="#">Sub Menu 4</a>
+											</li>
+											<li>
+												<a href="#">Sub Menu 5</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+	<nav class="menu menu-right" id="profile">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-img">
+						<img alt="User" src="images/samples/landscape.jpg">
+					</div>
+					<div class="menu-top-info">
+						<a class="menu-top-user waves-effect" data-toggle="modal" href="#modal"><span class="avatar pull-left"><img alt="alt text for avatar" src="images/users/avatar-001.jpg"></span>John Doe</a>
+					</div>
+				</div>
+				<div class="menu-content">
+					<ul class="nav">
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-account-box"></span> My Profile</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-settings"></span>Account Settings</a>
+						</li>
+						<li>
+							<a href="page-login.html"><span class="icon icon-exit-to-app"></span>Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="content">
+						<div class="content-heading">
+							<div class="container">
+								<h1 class="heading">Home</h1>
+							</div>
+						</div>
+
+		<div class="content-inner">
+			<div class="container">
+				<nav class="tab-nav tab-nav-red">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-red waves-effect" data-toggle="tab" href="#first-tab">Create An Account</a>
+						</li>
+						<li>
+							<a class="waves-color-red waves-effect" data-toggle="tab" href="#second-tab">Sign In</a>
+						</li>
+						<!--<li>
+							<a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab">Third Tab</a>
+						</li>-->
+					</ul>
+				</nav>
+				<!--<nav class="tab-nav">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-effect" data-toggle="tab" href="#first-tab">First Tab</a>
+						</li>
+						<li>
+							<a class="waves-effect" data-toggle="tab" href="#second-tab">Second Tab</a>
+						</li>
+						<li>
+							<a class="waves-effect" data-toggle="tab" href="#third-tab">Third Tab</a>
+						</li>
+					</ul>
+				</nav>-->
+				<div class="tab-content">
+					<div class="tab-pane fade active in" id="first-tab">
+						<!--<p>This is the sign up form tab</p>-->
+						<div class="content-inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3 col-xs-10 col-xs-push-1">
+										<div class="card-wrap">
+											<div class="card">
+												<div class="card-main">
+													<!--<div class="card-header">
+														<div class="card-inner">
+															<h1 class="card-heading">Login</h1>
+														</div>
+													</div>-->
+													<div class="card-inner">
+														<p class="text-center">
+															<span class="quill quill-inline quill-lg">
+																<img alt="Login" src="images/users/quill-1-new.jpg">
+															</span>
+														</p>
+														<form class="form" action="index.html">
+															<div class="form-group form-group-label">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1" style="width:41.5%;">
+																		<label class="floating-label" for="signup-firstname">First Name</label>
+																		<input class="form-control" id="signup-firstname" type="text" required>
+																	</div>
+																	<div class="col-md-10 col-md-push-1" style="width:41.5%;">
+																		<label class="floating-label" for="signup-lastname">Last Name</label>
+																		<input class="form-control" id="signup-lastname" type="text" required>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group form-group-label">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<label class="floating-label" for="login-username">Enter email</label>
+																		<input class="form-control" id="login-username" type="email" required>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group form-group-label">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<label class="floating-label" for="login-password">New password</label>
+																		<input class="form-control" id="login-password" type="password" required>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<button class="btn btn-block btn-blue waves-button waves-effect waves-light">Sign Up! :)</button>
+																	</div>
+																</div>
+																<fieldset class="hr-line">
+																	<legend align="center">&nbsp;OR&nbsp;</legend>
+																</fieldset>
+																<div class="row">
+																	<div class="facebook-hover social-slide social"></div></div><div class="row">
+																	<div class="google-hover social-slide social"></div></div><div class="row">
+																	<div class="twitter-hover social-slide social"></div></div><div class="row">
+																</div>
+															</div>
+															<!--<div class="form-group">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<div class="checkbox checkbox-adv">
+																			<label for="login-remember">
+																				<input class="access-hide" id="login-remember" name="login-remember" type="checkbox">Stay signed in
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>-->
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix">
+											<!--<p class="margin-no-top pull-left"><a href="javascript:void(0)">Need help?</a></p>-->
+											<p class="margin-no-top pull-right"><a href="javascript:void(0)">Need help?</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="second-tab">
+						<!--<p>This is the login tab</p>-->
+						<div class="content-inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3 col-xs-10 col-xs-push-1">
+										<div class="card-wrap">
+											<div class="card">
+												<div class="card-main">
+													<!--<div class="card-header">
+														<div class="card-inner">
+															<h1 class="card-heading">Login</h1>
+														</div>
+													</div>-->
+													<div class="card-inner">
+														<p class="text-center">
+															<span class="avatar avatar-inline avatar-md">
+																<img alt="Login" src="images/users/avatar-001.jpg">
+															</span>
+														</p>
+														<form class="form" method="POST" id="login-form" action="/login">
+															<div class="form-group form-group-label">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<label class="floating-label" for="login-username">Email</label>
+																		<input class="form-control" id="login-username" name="username" type="text">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group form-group-label">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<label class="floating-label" for="login-password">Password</label>
+																		<input class="form-control" id="login-password" name="password" type="password">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<button class="btn btn-block btn-blue waves-button waves-effect waves-light" type="submit">Sign In</button>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
+																		<div class="checkbox checkbox-adv">
+																			<label for="login-remember">
+																				<input class="access-hide" id="login-remember" name="login-remember" type="checkbox">Stay signed in
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="clearfix">
+											<!--<p class="margin-no-top pull-left"><a href="javascript:void(0)">Need help?</a></p>-->
+											<p class="margin-no-top pull-right"><a href="javascript:void(0)">Forgot Password?</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<div class="tab-pane fade" id="third-tab">
+						<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					</div>-->
+				</div>
+				<!--<h2 class="content-sub-heading">Coloured Tab Navs</h2>
+				<p><span class="icon icon-info margin-right-half"></span>Default tab nav inherits link colour ($link-color).</p>
+				<nav class="tab-nav tab-nav-alt">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-alt waves-effect" data-toggle="tab" href="#first-tab-alt">Brand Colour</a>
+						</li>
+						<li>
+							<a class="waves-color-alt waves-effect" data-toggle="tab" href="#second-tab-alt">Anohter Tab</a>
+						</li>
+						<li>
+							<a class="waves-color-alt waves-effect" data-toggle="tab" href="#third-tab-alt">Third Tab</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="tab-nav tab-nav-blue">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-blue waves-effect" data-toggle="tab" href="#first-tab-blue">Blue Tab Nav</a>
+						</li>
+						<li>
+							<a class="waves-color-blue waves-effect" data-toggle="tab" href="#second-tab-blue">Anohter Tab</a>
+						</li>
+						<li>
+							<a class="waves-color-blue waves-effect" data-toggle="tab" href="#third-tab-blue">Third Tab</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="tab-nav tab-nav-green">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-green waves-effect" data-toggle="tab" href="#first-tab-green">Green Tab Nav</a>
+						</li>
+						<li>
+							<a class="waves-color-green waves-effect" data-toggle="tab" href="#second-tab-green">Anohter Tab</a>
+						</li>
+						<li>
+							<a class="waves-color-green waves-effect" data-toggle="tab" href="#third-tab-green">Third Tab</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="tab-nav tab-nav-purple">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-purple waves-effect" data-toggle="tab" href="#first-tab-purple">Purple Tab Nav</a>
+						</li>
+						<li>
+							<a class="waves-color-purple waves-effect" data-toggle="tab" href="#second-tab-purple">Anohter Tab</a>
+						</li>
+						<li>
+							<a class="waves-color-purple waves-effect" data-toggle="tab" href="#third-tab-purple">Third Tab</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="tab-nav tab-nav-red">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-red waves-effect" data-toggle="tab" href="#first-tab-red">Red Tab Nav</a>
+						</li>
+						<li>
+							<a class="waves-color-red waves-effect" data-toggle="tab" href="#second-tab-red">Anohter Tab</a>
+						</li>
+						<li>
+							<a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Third Tab</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="tab-nav tab-nav-yellow">
+					<ul class="nav nav-justified">
+						<li class="active">
+							<a class="waves-color-yellow waves-effect" data-toggle="tab" href="#first-tab-yellow">Yellow Tab Nav</a>
+						</li>
+						<li>
+							<a class="waves-color-yellow waves-effect" data-toggle="tab" href="#second-tab-yellow">Anohter Tab</a>
+						</li>
+						<li>
+							<a class="waves-color-yellow waves-effect" data-toggle="tab" href="#third-tab-yellow">Third Tab</a>
+						</li>
+					</ul>
+				</nav>-->
+			</div>
+		</div>
+	</div>
+	<!-- ==================================== -->
+	</div>
+</div>
+</div>
+<footer class="footer">
+		<div class="container">
+			<p>Lets Go!!</p>
+		</div>
+</footer>
+
+<div aria-hidden="true" class="modal fade" id="modal" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					<h2 class="modal-title">Profile</h2>
+				</div>
+				<div class="modal-inner">
+					<div class="row">
+					<div class="col-lg-4 col-sm-6">
+							<div class="card">
+								<aside class="card-main">
+									<div class=" card-img">
+										<img alt="alt text" src="images/users/avatar-001.jpg">
+									</div>
+								</aside>
+							</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+
+										<a class="btn btn-flat btn-blue waves-button waves-effect"><span class="icon icon-create"> Change Image</span></a>
+										<a class="btn btn-flat btn-red waves-button waves-effect"><span class="icon icon-delete"> Remove Image</span></a>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script src="js/base.min.js" type="text/javascript"></script>
+	</body>
+	</html>
