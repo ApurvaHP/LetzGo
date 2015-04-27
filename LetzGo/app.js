@@ -6,12 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
 var mysql = require('mysql');
+var session = require('express-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var user_auth = require('./routes/user_auth');
 
 var app = express();
+
+//for session
+app.use(session({secret: 'keyboard cat'}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
