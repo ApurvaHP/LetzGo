@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
 
 router.get('/home', function(req, res, next) {
 	var sess = req.session;
-	console.log(sess.username);
-	  res.render('home', { title: 'LetzGO - Home', uname: sess.username });
+	var uname = sess.username;
+	  res.render('home', { title: 'LetzGO - Home', uname: uname });
 	});
 
 module.exports = router;

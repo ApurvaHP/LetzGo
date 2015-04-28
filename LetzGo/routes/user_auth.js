@@ -22,7 +22,7 @@ router.get('/login', function(req, res, next) {
 
 
 router.post('/login', function(req, res) {
-	//var sess = req.session;
+	var sess = req.session;
 	connectionpool.getConnection(function(err, connection) {
 		//console.log("Inside cpool");
 		var input = JSON.parse(JSON.stringify(req.body));
@@ -37,8 +37,8 @@ router.post('/login', function(req, res) {
 				console.log("Error Selecting : %s ", err);
 			for ( var i in rows) {
 				if (i == 0) {
-					var sess = req.session;
-					console.log(input.username);
+					//var sess = req.session;
+					//console.log(input.username);
 					sess.username = input.username;
 					res.redirect('/home');
 				}
@@ -59,7 +59,8 @@ router.get('/logout', function(req, res) {
 		if (err) {
 			console.log(err);
 		} else {
-			res.redirect('/');
+			//console.log(req.session.username);
+			res.redirect('/home');
 		}
 	});
 });
