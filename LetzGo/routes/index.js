@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/home', function(req, res, next) {
-	  res.render('home', { title: 'LetzGO - Home' });
+	var sess = req.session;
+	console.log(sess.username);
+	  res.render('home', { title: 'LetzGO - Home', uname: sess.username });
 	});
 
 module.exports = router;
