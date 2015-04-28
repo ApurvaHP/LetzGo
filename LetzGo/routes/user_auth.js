@@ -9,10 +9,10 @@ var mysql = require('mysql');
 var session = require('express-session');
 
 connectionpool = mysql.createPool({
-	host : 'localhost',
-	user : 'root',
-	password : 'jaijinendra',
-	database : 'letzgodb'
+	host : 'ip',
+	user : 'username',
+	password : 'pass',
+	database : 'dbname'
 });
 
 /* GET login page. */
