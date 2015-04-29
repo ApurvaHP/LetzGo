@@ -4,96 +4,9 @@
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Home</title>
+	<title><%= title%></title>
 
 	<link href="css/base.min.css" rel="stylesheet">
-
-		<script type="text/javascript">
-			 function checkPass()
-	      {
-	          //Store the password field objects into variables ...
-	          var pass1 = document.getElementById('input-password');
-	          var pass2 = document.getElementById('confirmpass');
-	          //Store the Confimation Message Object ...
-	          //var message = document.getElementById('confirmMessage');
-	          if(pass1.value != pass2.value){
-	            alert("Yikes!! Passwords don't match");
-	          }else{
-	              //
-	          }
-	      }
-		</script>
-		<script type="text/javascript">
-	      var res = 0;
-	      var level = 0;
-	      var Lowcase = 0;
-	      var Uppcase = 0;
-	      var num = 0;
-	      var spec =0;
-	    function check(x)
-	      {
-	        var p1 = /[a-z]/;
-	        var p2 = /[A-Z]/;
-	        var p3 = /[0-9]/;
-	        var p4 = /[\!\@\#\$\%\^\&\*\(\)\-\_\=\+\[\{\]\}\|\\\;\:\'\"\,\<\.\>\/\?\`\~]/;
-	        if(x.length>24)
-	          alert("Password Maximum length is 24");
-	        if(p1.test(x))
-	          Lowcase++;
-	        if(p2.test(x))
-	          Uppcase++;
-	        if(p3.test(x))
-	          num++;
-	          //alert("Numbers not allowed");
-	        if(p4.test(x))
-	          spec++;
-	        if(x!=null)
-	          prog_bar(Lowcase, Uppcase, spec,175,15,"#0066FF","#99FFFF", Lowcase+Uppcase+num );
-	      }
-
-
-	    function prog_bar(Lowcase, Uppcase, spec,width,height,border,fill, total)
-	      {
-	      var str = "";
-	      if(total == 0)
-	      {
-	        fill = "";
-	        res=0;
-	      }
-	      else if(Lowcase<=2 || Uppcase<=3 || spec<=2 )
-	      {
-	        fill = "#FF0000";
-	        res=25;
-	      }
-	      else if(Lowcase>=2 && Uppcase>=3 && spec>=2  && spec<=5)
-	      {
-	        fill = "#FFFF00";
-	        res=60;
-	      }
-	      else
-	      {
-	        fill = "#00008B";
-	        res=100;
-	      }
-	      str = str + "<div style=\"border:"+border+" solid thin; width:"+width+"px; height:"+height+"px;\">";
-	      str = str + "<div style=\"background-color:"+fill+"; width:"+res+"%; height:"+height+"px;\">";
-	      str = str + "</div></div>";
-
-	      if(total == 0)
-	      {
-	        str = str + "Empty Password";
-	      }
-	      else if(Lowcase<=2 || Uppcase<=3 || spec<=2 )
-	        str = str + "Normal";
-	      else if(Lowcase>=2 && Uppcase>=3 && spec>=2  && spec<=5)
-	          str = str + "Medium";
-	      else
-	          str = str + "Strong";
-
-	      //alert(str);
-	      document.getElementById("prog_bar").innerHTML = str;
-	      }
-	</script>
 </head>
 <body style="margin-bottom: 73px;">
 
@@ -208,7 +121,7 @@
 	<div class="content">
 						<div class="content-heading">
 							<div class="container">
-								<h1 class="heading">Home</h1>
+								<h1 class="heading">Settings</h1>
 							</div>
 						</div>
 
@@ -217,153 +130,21 @@
 				<nav class="tab-nav">
 					<ul class="nav nav-justified">
 						<li class="active">
-							<a class="waves-effect" data-toggle="tab" href="#first-tab">General </a>
+							<a class="waves-effect" data-toggle="tab" href="#first-tab">Security & Notifications </a>
 						</li>
 						<li>
-							<a class="waves-effect" data-toggle="tab" href="#second-tab">Security & Notifications</a>
+							<a class="waves-effect" data-toggle="tab" href="#second-tab">Sharing & Privacy</a>
 						</li>
 
-						<li>
+						<!--<li>
 							<a class="waves-effect" data-toggle="tab" href="#third-tab">Sharing & Privacy</a>
-						</li>
+						</li>-->
 
 					</ul>
 				</nav>
 				<div class="tab-content">
 					<div class="tab-pane fade active in" id="first-tab">
-						<form class="form">
-							<fieldset>
-								<legend class="col-lg-offset-2 col-md-offset-3 col-sm-offset-4">General Settings</legend>
-
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Firstname</label>
-													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-												</div>
-											</div>
-										</div>
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Lastname</label>
-													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-												</div>
-											</div>
-										</div>
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Username</label>
-													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-												</div>
-											</div>
-										</div>
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Email</label>
-													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-												</div>
-											</div>
-										</div>
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="input-password">Password</label>
-												</div>
-
-													<input class="form-control" id="input-password" type="password" onkeyup="check(this.value)" placeholder="Enter Password">
-
-											</div>
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label>Password Strength</label>
-												</div>
-												<div class="col-lg-4 col-md-6 col-sm-8">
-													<div id="prog_bar" style="width: 360px;"></div>
-												</div>
-
-											</div>
-										</div>
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="input-password">Confirm Password</label>
-												</div>
-													<input class="form-control" id="confirmpass" type="password" placeholder="Must be same as password">
-
-											</div>
-										</div>
-
-							<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Language</label>
-													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-												</div>
-											</div>
-										</div>
-
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Phone</label>
-
-														<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-
-												</div>
-											</div>
-										</div>
-										<div class="form-group form-group-label form-group-green">
-											<div class="row">
-												<div class="col-lg-6 col-sm-8">
-													<label class="floating-label" for="float-text-green">Location</label>
-
-														<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-
-												</div>
-											</div>
-										</div>
-
-
-										<div class="form-group-label form-group-green form-group">
-											<div class="col-lg-6 col-sm-8">
-												<label class="form-label" style="margin-left: -47%;">Gender</label>
-											</div>
-											<div class="radio radio-adv radio-inline">
-												<label for="input-radio-inline-1">
-													<input class="access-hide" id="input-radio-inline-1" name="input-radio-inline" type="radio">Female
-												</label>
-											</div>
-											<div class="radio radio-adv radio-inline">
-												<label for="input-radio-inline-2">
-													<input class="access-hide" id="input-radio-inline-2" name="input-radio-inline" type="radio">Male
-												</label>
-											</div>
-										</div>
-										<div class="form-group form-group-green">
-											<div class="row">
-												<div class="col-lg-2 col-md-3 col-sm-4">
-													<label class="form-label" for="datepicker-adv-1">Birthday</label>
-												</div>
-
-													<input class="datepicker-adv datepicker-adv-default form-control" id="datepicker-adv-1" type="text">
-												</div>
-											</div>
-										</div>
-
-
-							</fieldset>
-						</form>
-					</div>
-
-
-
-
-
-
-					<div class="tab-pane fade active in"  id="second-tab">
+						<form>
 						<fieldset>
 							<legend class="col-lg-offset-2 col-md-offset-3 col-sm-offset-4">Security Settings</legend>
 								<div class="form-group">
@@ -479,13 +260,10 @@
 
 							</div>
 						</fieldset>
-				    </div>
+						</form>
+					</div>
 
-
-
-
-
-					<div class="tab-pane fade active in"  id="third-tab">
+					<div class="tab-pane fade in"  id="second-tab">
 						<fieldset>
 							<legend class="col-lg-offset-2 col-md-offset-3 col-sm-offset-4">Sharing and Privacy</legend>
 
@@ -537,7 +315,62 @@
 
 								</div>
 							</div>
-						</div>
+							</fieldset>
+				    </div>
+					<!--<div class="tab-pane fade active in"  id="third-tab">
+						<fieldset>
+							<legend class="col-lg-offset-2 col-md-offset-3 col-sm-offset-4">Sharing and Privacy</legend>
+
+						<div class="form-group">
+							<div class="row">
+								<div class="col-lg-2 col-md-3 col-sm-4">
+									<span class="form-label">Set Sharing on for:</span>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-8">
+									<div class="checkbox">
+										<label for="input-checkbox-1">
+											<input id="input-checkbox-1" name="input-checkbox" type="checkbox">Share on Facebook
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="input-checkbox-2">
+											<input id="input-checkbox-2" name="input-checkbox" type="checkbox">Share on Twitter
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="input-checkbox-3">
+											<input id="input-checkbox-3" name="input-checkbox" type="checkbox">Share on Instagram
+										</label>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-2 col-md-3 col-sm-4">
+									<span class="form-label">Privacy Settings:</span>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-8">
+									<div class="checkbox">
+										<label for="input-checkbox-1">
+											<input id="input-checkbox-1" name="input-checkbox" type="checkbox">Link with my Facebook profile
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="input-checkbox-2">
+											<input id="input-checkbox-2" name="input-checkbox" type="checkbox">Allow LetzGO! to use my device's background location, even when the app is closed, including features like sending you notifications with local recommendations or tips.
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="input-checkbox-3">
+											<input id="input-checkbox-3" name="input-checkbox" type="checkbox">Allow my followers to send me tips and places.
+										</label>
+									</div>
+
+								</div>
+							</div>
+							</fieldset>
+						</div>-->
 					</div>
 			</div>
 		</div>
@@ -548,7 +381,7 @@
 </div>
 <footer class="footer">
 		<div class="container">
-			<p>Lets Go!!</p>
+			<p>LetzGo!!</p>
 		</div>
 </footer>
 

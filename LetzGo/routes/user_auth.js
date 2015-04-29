@@ -29,7 +29,7 @@ router.post('/login', function(req, res) {
 		var input = JSON.parse(JSON.stringify(req.body));
 		console.log(input);
 
-		var queryString = 'SELECT * FROM user_auth where email = "' + input.username
+		var queryString = 'SELECT * FROM user_auth where username = "' + input.username
 				+ '" AND password = "' + input.password + '"';
 		console.log(queryString);
 		connection.query(queryString, function(err, rows) {
@@ -41,7 +41,7 @@ router.post('/login', function(req, res) {
 					//var sess = req.session;
 					//console.log(input.username);
 					sess.username = input.username;
-					res.redirect('/home');
+					res.redirect('/profile:id');
 				}
 				else{
 					res.redirect('/login');

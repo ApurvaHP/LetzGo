@@ -12,4 +12,10 @@ router.get('/home', function(req, res, next) {
 	  res.render('home', { title: 'LetzGO - Home', uname: uname });
 	});
 
+router.get('/settings', function(req, res, next) {
+	var sess = req.session;
+	var uname = sess.username;
+	  res.render('settings', { title: 'LetzGO - Settings', uname: uname });
+	});
+
 module.exports = router;
