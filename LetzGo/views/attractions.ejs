@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, width=device-width" name="viewport">
+	<title>Fixed Left/Right Hand Side Column - Material</title>
+
+	<!-- css -->
+	<link href="css/base.min.css" rel="stylesheet">
+	<style type="text/css">
+	.rating {
+    float:left;
+    border:none;
+}
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0, 0, 0, 0);
+}
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+}
+.rating:not(:checked) > label:before {
+    content:'★ ';
+}
+.rating > input:checked ~ label {
+    color: #f70;
+}
+.rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+.rating > input:checked + label:hover, .rating > input:checked + label:hover ~ label, .rating > input:checked ~ label:hover, .rating > input:checked ~ label:hover ~ label, .rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+}
+.rating > label:active {
+    position:relative;
+}
+.tab-content.active { display: block } .tab-content { display: none } .tab-content.active { display: block } .tab-content { display: none } .morecontent span {display: none;} .morelink {display: block;}
+	</style>
+
+	<!-- favicon -->
+	<!-- ... -->
+
+	<!-- ie -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.js" type="text/javascript"></script>
+		<![endif]-->
+</head>
+<body>
+	<header class="header">
+		<div class="clearfix pull-left">
+			<ul class="nav nav-list pull-left">
+				<li>
+					<a class="menu-toggle" href="#menu">
+						<span class="access-hide">Menu</span>
+						<span class="icon icon-menu"></span>
+						<span class="header-close icon icon-close"></span>
+					</a>
+				</li>
+			</ul>
+			<a class="header-logo" href="index.html">Material</a>
+		</div>
+		<div class="clearfix pull-right">
+			<ul class="nav nav-list pull-right">
+				<li>
+					<a class="menu-toggle" href="#search">
+						<span class="access-hide">Search</span>
+						<span class="icon icon-search"></span>
+						<span class="header-close icon icon-close"></span>
+					</a>
+				</li>
+				<li>
+					<a class="menu-toggle" href="#profile">
+						<span class="access-hide">John Smith</span>
+						<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+						<span class="header-close icon icon-close"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<nav class="menu" id="menu">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-content">
+					<ul class="nav">
+						<li>
+							<a href="ui-card.html">Cards</a>
+						</li>
+						<li>
+							<a href="ui-collapse.html">Collapsible Regions</a>
+						</li>
+						<li>
+							<a href="ui-dropdown.html">Dropdowns</a>
+						</li>
+						<li>
+							<a href="ui-modal.html">Modals &amp; Toasts</a>
+						</li>
+						<li>
+							<a href="ui-tab.html">Tabs</a>
+						</li>
+						<li>
+							<a href="ui-tile.html">Tiles</a>
+						</li>
+					</ul>
+					<hr>
+					<ul class="nav">
+						<li>
+							<a href="ui-button.html">Buttons</a>
+						</li>
+						<li>
+							<a href="ui-form.html">Form Elements</a>
+							<span class="menu-collapse-toggle collapsed" data-target="#form-elements" data-toggle="collapse"><i class="icon icon-close menu-collapse-toggle-close"></i><i class="icon icon-add menu-collapse-toggle-default"></i></span>
+							<ul class="menu-collapse collapse" id="form-elements">
+								<li>
+									<a href="ui-form-adv.html">Materialised Form Elements</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="ui-icon.html">Icons</a>
+						</li>
+					</ul>
+					<hr>
+					<ul class="nav">
+						<li class="active">
+							<a href="page-affix.html">Fixed LHC/RHC Page</a>
+						</li>
+						<li>
+							<a href="page-affix-full.html">Full-Width Page</a>
+						</li>
+						<li>
+							<a href="page-login.html">Login Page</a>
+						</li>
+						<li>
+							<a href="page-palette.html">Page Palettes</a>
+							<span class="menu-collapse-toggle collapsed" data-target="#page-palettes" data-toggle="collapse"><i class="icon icon-close menu-collapse-toggle-close"></i><i class="icon icon-add menu-collapse-toggle-default"></i></span>
+							<ul class="menu-collapse collapse" id="page-palettes">
+								<li>
+									<a href="page-palette-blue.html">Blue Palette</a>
+								</li>
+								<li>
+									<a href="page-palette-green.html">Green Palette</a>
+								</li>
+								<li>
+									<a href="page-palette-purple.html">Purple Palette</a>
+								</li>
+								<li>
+									<a href="page-palette-red.html">Red Palette</a>
+								</li>
+								<li>
+									<a href="page-palette-yellow.html">Yellow Palette</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<nav class="menu menu-right" id="profile">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-img">
+						<img alt="John Smith" src="images/samples/landscape.jpg">
+					</div>
+					<div class="menu-top-info">
+						<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>John Smith</a>
+					</div>
+				</div>
+				<div class="menu-content">
+					<ul class="nav">
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>Upload Photo</a>
+						</li>
+						<li>
+							<a href="page-login.html"><span class="icon icon-exit-to-app"></span>Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="menu menu-right menu-search" id="search">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-info">
+						<form class="menu-top-form">
+							<label class="access-hide" for="menu-search">Search</label>
+							<input class="form-control form-control-inverse menu-search-focus" id="menu-search" placeholder="Search" type="search">
+							<button class="access-hide" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+				<div class="menu-content">
+					<div class="menu-content-inner">
+						<p><strong>Saved Search Queries:</strong></p>
+						<ul>
+							<li><a href="javascript:void(0)">lorem ipsum dolor sit amet</a></li>
+							<li><a href="javascript:void(0)">consectetur adipiscing elit</a></li>
+							<li><a href="javascript:void(0)">sed ornare orci lorem</a></li>
+							<li><a href="javascript:void(0)">vel eleifend elit tempor eleifend</a></li>
+							<li><a href="javascript:void(0)">morbi feugiat aliquet justo</a></li>
+						</ul>
+						<hr>
+						<p><strong>Popular Search Queries:</strong></p>
+						<ul>
+							<li><a href="javascript:void(0)">id ullamcorper tortor lobortis eu</a></li>
+							<li><a href="javascript:void(0)">aliquam ut tellus arcu</a></li>
+							<li><a href="javascript:void(0)">cestibulum tortor purus</a></li>
+							<li><a href="javascript:void(0)">pretium ac dolor id</a></li>
+							<li><a href="javascript:void(0)">gravida molestie libero</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-heading">
+			<div class="container">
+				<h1 class="heading">Fixed Left/Right Hand Side Column</h1>
+			</div>
+		</div>
+		<div class="content-inner">
+			<div class="container">
+				<div class="row row-fix">
+					<div class="col-md-12 content-fix">
+						<div class="content-fix-scroll">
+							<div class="content-fix-wrap">
+								<div class="content-fix-inner">
+									<h1 class="content-sub-heading" style="font-size: 27px; margin-bottom: -3%;">Raging Waters Amusement Park</h1><br>
+						<p style="font-siz:14px; font-style:italic; margin-bottom: 0%;">154 reviews</p>
+						<div class="text-overflow"><span class="icon icon-place"></span>&nbsp;&nbsp;<small>2333 South White Road, San Jose, CA 95148<br><label style="font-weight: bold; margin-left: 23px;">Phone:</label>&nbsp;(408) 238-9900<label style="font-weight: bold;">&nbsp; Fax:<label>&nbsp;(408) 270-2022</small></div></br>
+						<div style="width: 100%; display: inline-block;">
+							<div style="display: inline-block; float: left; ">
+								<img style="width: 90%; border="0"; alt="Null";" src="images/samples/raging2.jpg">
+							</div>
+							<div style="display: inline-block; float: right;">
+								<div id="map-canvas" style="width: 270px; height: 278px; box-shadow: 3px 3px 5px 6px #ccc;"></div>
+							</div>
+						</div>
+						<div>
+						<p>Raging Waters San Jose is celebrating its 30th season as Northern California’s premier water park destination. Enjoy scenic panoramic views of Lake Cunningham and the San Jose Foothills, over a million gallons of water attractions, and 23-acres of family fun!
+						Raging Waters is one of the best places to visit in San Jose, CA! Our most popular family attractions include the 350,000-gallon Wave Pool, Endless River and Family Raft Ride. Thrill seekers can literally drop vertically from a trap floor on Bombs Away, race speed slides on White Lightening and Blue Thunder, and splash into the deep waters of Shotgun Falls. Two dedicated kiddie play areas feature waterfalls, tiny tot slides and zero depth entry zones.</p></div>
+						<div style="display: inline-block; width: 100%;">
+						<div class="form-group form-group-label form-group-green" style="display: inline-block; float: left; width: 68%;">
+							<div class="row">
+								<div class="col-lg-6 col-sm-8">
+									<label class="floating-label" for="float-textarea" style="font-style: italic;">Write a review <span class="icon icon-insert-comment"></span></br></label>
+									<textarea class="form-control" id="float-textarea" rows="4"></textarea>
+									<p class="margin-no-top"><a class="btn btn-green waves-button waves-effect waves-light" style="margin-left: 105%; margin-top: -14%;">POST</a></p>
+									<!--<button style="float: right; margin-right: -54%; margin-top: -27%;" class="btn btn-flat btn-alt icon icon-thumb-up" type="button"><small> Like</small></button><br>
+									<button style="float: right; margin-right: -54%; margin-top: -24%;" class="btn btn-flat btn-alt icon icon-thumb-down" type="button"><small> Dislike</small></button>-->
+									<fieldset class="rating" style="margin-top: -9%;">
+										<p style="color: #4caf50; font-style: italic; margin-bottom: 4%;">Rate the place <span class="icon icon-thumb-up"></span><span class="icon icon-thumb-down"></span></p>
+										<input type="radio" id="star5" name="rating" value="5" />
+									    <label for="star5">5 stars</label>
+									    <input type="radio" id="star4" name="rating" value="4" />
+										<label for="star4">4 stars</label>
+									    <input type="radio" id="star3" name="rating" value="3" />
+									    <label for="star3">3 stars</label>
+									    <input type="radio" id="star2" name="rating" value="2" />
+										<label for="star2">2 stars</label>
+									    <input type="radio" id="star1" name="rating" value="1" />
+									    <label for="star1">1 star</label>
+									</fieldset>
+
+								</div>
+							</div>
+						</div>
+						<div id="piechart_3d" style="width: 270px; height: 270px; box-shadow: 3px 3px 5px 6px #ccc; display: inline-block; float: right;"></div>
+					</div>
+						<div class="form-group form-group-label form-group-green">
+							<div class="row" style="margin-bottom: 4%;">
+								<div class="col-lg-6 col-sm-8">
+									<label class="floating-label" for="float-textarea" style="font-size: 20px;">User Reviews <span class="icon icon-forum"></span></br></label>
+								</div>
+							</div>
+						</div>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:7%;" src="images/users/user1.jpg">
+													</picture>
+													<p style="font-size: 15px; margin-top: 3%; margin-left: 17%;">Username</p>
+													<p style="font-size: 15px; margin-top: -12%; margin-left: 17%;">San Jose, CA</p>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner">
+													<h5 style="margin-top: 3%;">Raging Waters, San Jose</h5> 
+													<p class="card-heading" style="font-size: 14px; font-style: italic;">A Great Way To Cool Off!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:7%;" src="images/users/user1.jpg">
+													</picture>
+													<p style="font-size: 15px; margin-top: 3%; margin-left: 17%;">Username</p>
+													<p style="font-size: 15px; margin-top: -12%; margin-left: 17%;">San Jose, CA</p>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner">
+													<h5 style="margin-top: 3%;">Raging Waters, San Jose</h5> 
+													<p class="card-heading" style="font-size: 14px; font-style: italic;">A Great Way To Cool Off!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:7%;" src="images/users/user1.jpg">
+													</picture>
+													<p style="font-size: 15px; margin-top: 3%; margin-left: 17%;">Username</p>
+													<p style="font-size: 15px; margin-top: -12%; margin-left: 17%;">San Jose, CA</p>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner">
+													<h5 style="margin-top: 3%;">Raging Waters, San Jose</h5> 
+													<p class="card-heading" style="font-size: 14px; font-style: italic;">A Great Way To Cool Off!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p>Material</p>
+		</div>
+	</footer>
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-red" href="https://github.com/Daemonite/material"><span class="fbtn-text">Fork me on GitHub</span><span class="fa fa-github"></span></a>
+		</div>
+	</div>
+
+	<script src="js/base.min.js" type="text/javascript"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var myLatlng = new google.maps.LatLng(37.3354, -121.8131);
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({
+	      position: myLatlng,
+	      map: map,
+	      title: 'Raging Waters San Jose'
+	  	});
+      }
+      google.maps.event.addDomListener(window, 'resize', initialize);
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Like', 44],
+          ['Dislike', 56]
+        ]);
+
+        var options = {
+          title: 'Ratings',
+          is3D: true
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+
+      $(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 100;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "Read more";
+    var lesstext = "Read less";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+      </script>
+</body>
+</html>

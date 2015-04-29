@@ -9,11 +9,12 @@ var mysql = require('mysql');
 var session = require('express-session');
 
 connectionpool = mysql.createPool({
-	host : 'ip',
-	user : 'username',
-	password : 'pass',
-	database : 'dbname'
+	host : 'mysqldbinstanceaws.cd6bkgkbz9zf.us-west-2.rds.amazonaws.com',
+	user : 'member',
+	password : 'letzgoPassword',
+	database : 'letzgoDB'
 });
+
 
 /* GET login page. */
 router.get('/login', function(req, res, next) {
