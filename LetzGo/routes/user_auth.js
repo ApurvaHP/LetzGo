@@ -18,7 +18,18 @@ connectionpool = mysql.createPool({
 
 /* GET login page. */
 router.get('/login', function(req, res, next) {
-  res.render('user_auth');
+	var sess = req.session;
+	if(sess.user == null || sess.user == ""){
+		if(sess.login != 0 || sess.login == null || sess.login == ""){
+			res.render('user_auth',{title:"Sign In | Register", toast: '0'});
+		}else if(sess.login == 0 ){
+			res.render('user_auth',{title:"Sign In | Register", toast: '1'});
+			sess.login = 1;
+		}
+	}
+	else{
+		res.redirect('/profile');
+	}
 });
 
 
@@ -28,24 +39,22 @@ router.post('/login', function(req, res) {
 		//console.log("Inside cpool");
 		var input = JSON.parse(JSON.stringify(req.body));
 		console.log(input);
-
-		var queryString = 'SELECT * FROM user_auth where username = "' + input.username
+		var queryString = 'SELECT * FROM users where username = "' + input.username
 				+ '" AND password = "' + input.password + '"';
-		console.log(queryString);
+		//console.log(queryString);
 		connection.query(queryString, function(err, rows) {
-			console.log(input);
+			//console.log(input);
 			if (err)
 				console.log("Error Selecting : %s ", err);
 			for ( var i in rows) {
 				if (i == 0) {
-					//var sess = req.session;
-					//console.log(input.username);
-					sess.username = input.username;
-					res.redirect('/profile:id');
+					sess.user = rows[i];
+					console.log(sess.user);
+					res.redirect('/profile');
 				}
 				else{
+					sess.login = 0;
 					res.redirect('/login');
-					sess.username = "";
 				}
 			}
 			connection.release();
@@ -61,7 +70,7 @@ router.get('/logout', function(req, res) {
 			console.log(err);
 		} else {
 			//console.log(req.session.username);
-			res.redirect('/home');
+			res.redirect('/login');
 		}
 	});
 });

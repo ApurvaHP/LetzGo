@@ -10,13 +10,11 @@
 	
 	<title>Letz Go</title>
 </head>
-<body>
+<body onload="get_location();">
 <audio autoplay loop>
-  <source src="sounds/track.mp3" type="audio/mpeg">
+  <source src="sounds/track1.mp3" type="audio/mpeg">
   Your browser does not support the audio tag.
 </audio>
-
-
 <div class="container">
 <a href="#"><!-- Link to home page (probably)-->
 	<ul id="scene" class="scene">
@@ -56,17 +54,6 @@
  -->
 </div>
 
-	
-	
-
-
-
-
-
-
-	
-
-
 
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.parallax.js"></script>
@@ -92,6 +79,15 @@
     parallax.clipRelativeInput = clipCheckbox.checked;
   });
 
+  </script>
+  
+  <script>
+	navigator.geolocation.getCurrentPosition(GetLocation);
+	function GetLocation(location) {
+    alert(location.coords.latitude);
+    alert(location.coords.longitude);
+    alert(location.coords.accuracy);
+	}
   </script>
   <script src="js/base.min.js" type="text/javascript"></script>
 </body>
