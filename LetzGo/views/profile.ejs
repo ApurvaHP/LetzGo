@@ -80,7 +80,7 @@
 						</a>
 					</li>
 				</ul>
-				<a class="header-logo" href="/"><span><img src="./images/logoInline.png">Letz Go!!</a>
+				<a class="header-logo" href="/index"><span><img src="./images/logoInline.png">Letz Go!!</a>
 			</div>
 			<div class="clearfix pull-right">
 				<ul class="nav nav-list pull-right">
@@ -199,104 +199,617 @@
 				<div class="tab-content">
 					<div class="tab-pane fade active in" id="first-tab">
 						<p>This is the my information tab</p>
+						
+						<div>
+							<div class="card card-alt" style="min-height:200px;">
+								<div class="card-main">
+									<div class="card-inner"> 
+										<div>
+											<span><img style="height: 5%; line-height: 36px; margin-left: 4%; width: 150px; border-radius: 50%;" alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+											<span><h5 style="margin-left: 7%; margin-top: 2%;">San Jose, CA</h5></span>
+										</div>
+										<div id="center-content-div" style="margin-left: 36%; margin-top: -20%;">
+											<span><h2 style="color:green">Prachi Jain</h3></span><br>
+											<span><p style="font-size: 14px; font-style: italic; margin-left: 2%; margin-top: -7%;">jainprachi.55@gmail.com</p></span><br>
+											<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Birthday:</label> 25th June</span><br>
+											<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Phone:</label> 999-999-9999</span>
+										</div>
+										<button class="btn btn-flat btn-alt icon icon-edit" data-toggle="modal" href="#modal" type="button" style="font-size: 14px; margin-left: 66%;">Edit Profile</button>
+									</div>
+								</div>
+							</div>
+						</div>
 						<form name="htmlform" method="post" action="">
-						<div id="left-div">
-							<span><img style="height: 150px; line-height: 36px; margin-bottom: -6px; margin-top: -6px; margin-left: 4%; width: 150px; border-radius: 50%;" alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
-							<span><h5 style="margin-left: 7%; margin-top: 2%;">San Jose, CA</h5></span>
-						</div>
-						<div id="center-content-div" style="margin-left: 36%; margin-top: -20%;">
-
-							<span><h2 style="color:green">Prachi Jain</h3></span><br>
-							<span><p style="font-size: 14px; font-style: italic; margin-left: 2%; margin-top: -7%;">jainprachi.55@gmail.com</p></span><br>
-							<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Birthday:</label> 25th June</span><br>
-							<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Phone:</label> 999-999-9999</span>
-						</div>
-						<button class="btn btn-flat btn-alt icon icon-edit" data-toggle="modal" href="#modal" type="button" style="font-size: 14px; margin-left: 66%;">Edit Profile</button>
-						<hr style="margin-left: -12%;margin-right: 18%; position: relative;">
-					</form>
-					<div aria-hidden="true" class="modal fade" id="modal" role="dialog" tabindex="-1">
-						<div class="modal-dialog modal-xs">
-							<div class="modal-content">
-								<div class="modal-heading">
-									<a class="modal-close" data-dismiss="modal">&times;</a>
-									<h2 class="modal-title">Edit User Profile</h2>
-								</div>
-								<div class="modal-inner">
-									<div class="form-group form-group-label form-group-green">
-										<div class="row">
-											<div class="col-lg-6 col-sm-8">
-												<label class="floating-label" for="float-text-green">First Name</label>
-												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+							<div id="left-div">
+								<span><img style="height: 5%; line-height: 36px; margin-bottom: -6px; margin-top: -6px; margin-left: 4%; width: 150px; border-radius: 50%;" alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+								<span><h5 style="margin-left: 7%; margin-top: 2%;">San Jose, CA</h5></span>
+							</div>
+							<div id="center-content-div" style="margin-left: 36%; margin-top: -20%;">
+								<span><h2 style="color:green">Prachi Jain</h3></span><br>
+								<span><p style="font-size: 14px; font-style: italic; margin-left: 2%; margin-top: -7%;">jainprachi.55@gmail.com</p></span><br>
+								<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Birthday:</label> 25th June</span><br>
+								<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Phone:</label> 999-999-9999</span>
+							</div>
+							<button class="btn btn-flat btn-alt icon icon-edit" data-toggle="modal" href="#modal" type="button" style="font-size: 14px; margin-left: 66%;">Edit Profile</button>
+							<!--<hr style="margin-left: -12%;margin-right: 18%; position: relative;">-->
+						</form>
+						<div aria-hidden="true" class="modal fade" id="modal" role="dialog" tabindex="-1">
+							<div class="modal-dialog modal-xs">
+								<div class="modal-content">
+									<div class="modal-heading">
+										<a class="modal-close" data-dismiss="modal">&times;</a>
+										<h2 class="modal-title">Edit User Profile</h2>
+									</div>
+									<div class="modal-inner">
+										<div class="form-group form-group-label form-group-green">
+											<div class="row">
+												<div class="col-lg-6 col-sm-8">
+													<label class="floating-label" for="float-text-green">First Name</label>
+													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group form-group-label form-group-green">
-										<div class="row">
-											<div class="col-lg-6 col-sm-8">
-												<label class="floating-label" for="float-text-green">Last Name</label>
-												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+										<div class="form-group form-group-label form-group-green">
+											<div class="row">
+												<div class="col-lg-6 col-sm-8">
+													<label class="floating-label" for="float-text-green">Last Name</label>
+													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="form-group-green form-group">
-										<div class="col-lg-2 col-md-3 col-sm-4">
-											<label class="form-label" style="margin-left: -47%;">Gender</label>
-										</div>
-										<div class="radio radio-adv radio-inline">
-											<label for="input-radio-inline-1">
-												<input class="access-hide" id="input-radio-inline-1" name="input-radio-inline" type="radio">Female
-											</label>
-										</div>
-										<div class="radio radio-adv radio-inline">
-											<label for="input-radio-inline-2">
-												<input class="access-hide" id="input-radio-inline-2" name="input-radio-inline" type="radio">Male
-											</label>
-										</div>
-									</div>
-									<div class="form-group form-group-green">
-										<div class="row">
+										<div class="form-group-green form-group">
 											<div class="col-lg-2 col-md-3 col-sm-4">
-												<label class="form-label" for="datepicker-adv-1" style="margin-left: -19%;">Birthday</label>
+												<label class="form-label" style="margin-left: -47%;">Gender</label>
 											</div>
-											<div class="col-lg-4 col-md-6 col-sm-8" style="width: 81%; margin-left: -7%;">
-												<input class="datepicker-adv datepicker-adv-default form-control" id="datepicker-adv-1" type="text">
+											<div class="radio radio-adv radio-inline">
+												<label for="input-radio-inline-1">
+													<input class="access-hide" id="input-radio-inline-1" name="input-radio-inline" type="radio">Female
+												</label>
+											</div>
+											<div class="radio radio-adv radio-inline">
+												<label for="input-radio-inline-2">
+													<input class="access-hide" id="input-radio-inline-2" name="input-radio-inline" type="radio">Male
+												</label>
+											</div>
+										</div>
+										<div class="form-group form-group-green">
+											<div class="row">
+												<div class="col-lg-2 col-md-3 col-sm-4">
+													<label class="form-label" for="datepicker-adv-1" style="margin-left: -19%;">Birthday</label>
+												</div>
+												<div class="col-lg-4 col-md-6 col-sm-8" style="width: 81%; margin-left: -7%;">
+													<input class="datepicker-adv datepicker-adv-default form-control" id="datepicker-adv-1" type="text">
+												</div>
+											</div>
+										</div>
+										<div class="form-group form-group-label form-group-green">
+											<div class="row">
+												<div class="col-lg-6 col-sm-8">
+													<label class="floating-label" for="float-text-green">Email</label>
+													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+												</div>
+											</div>
+										</div>
+										<div class="form-group form-group-label form-group-green">
+											<div class="row">
+												<div class="col-lg-6 col-sm-8">
+													<label class="floating-label" for="float-text-green">Phone</label>
+													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+												</div>
+											</div>
+										</div>
+										<div class="form-group form-group-label form-group-green">
+											<div class="row">
+												<div class="col-lg-6 col-sm-8">
+													<label class="floating-label" for="float-text-green">My City</label>
+													<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+												</div>
 											</div>
 										</div>
 									</div>
-									<div class="form-group form-group-label form-group-green">
-										<div class="row">
-											<div class="col-lg-6 col-sm-8">
-												<label class="floating-label" for="float-text-green">Email</label>
-												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-											</div>
-										</div>
+									<div class="modal-footer">
+										<p class="text-right"><button class="btn btn-flat btn-alt icon icon-clear" data-dismiss="modal" type="button" style="margin-right: -8%;">Close</button><button class="btn btn-flat btn-alt icon icon-done" data-dismiss="modal" type="button">Save</button></p>
 									</div>
-									<div class="form-group form-group-label form-group-green">
-										<div class="row">
-											<div class="col-lg-6 col-sm-8">
-												<label class="floating-label" for="float-text-green">Phone</label>
-												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-											</div>
-										</div>
-									</div>
-									<div class="form-group form-group-label form-group-green">
-										<div class="row">
-											<div class="col-lg-6 col-sm-8">
-												<label class="floating-label" for="float-text-green">My City</label>
-												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="modal-footer">
-									<p class="text-right"><button class="btn btn-flat btn-alt icon icon-clear" data-dismiss="modal" type="button" style="margin-right: -8%;">Close</button><button class="btn btn-flat btn-alt icon icon-done" data-dismiss="modal" type="button">Save</button></p>
 								</div>
 							</div>
 						</div>
 					</div>
-					</div>
 					<div class="tab-pane fade" id="second-tab">
 						<p>This is the my interests tab</p>
+						<div class="tile-wrap" id="tile-parent-1">
+							<div class="tile">
+								<div class="tile-inner">
+									<h2 style="color:green">Your Perfect Holiday</h2>
+								</div>
+							</div>
+							<div class="tile">
+								<div class="tile-inner">
+								<img src="holiday.jpg" style="width: 60%; border="0"; alt="Null";">
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-1" data-target="#tile-collapse-4" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">What kind of holiday picture appeals to you?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-4">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Amusement Parks</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Relaxing beside Pool</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Museums</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Beaches</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Adventure</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Art Galleries</a></p>
+										</div>
+		
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-1" data-target="#tile-collapse-5" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">What type of accomodation do you like?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-5">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Bed & Breakast</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Motel</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">5 Star Hotel</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">3 to 4 Stars</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">1 to 2 Stars</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Resort with all amenities</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Cabins</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">I love Camping!</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Romantic Log Cabin</a></p>
+										</div>
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-1" data-target="#tile-collapse-6" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow"> The research that goes into your holiday planning is based on?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-6">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Family nearby</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Everything Taken Care</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">What looks interesting</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Highly rated</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Most visited</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Stuff to do</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Expenses</a></p>
+										</div>
+		
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tile-wrap" id="tile-parent-2">
+							<div class="tile">
+								<div class="tile-inner">
+									<h2 style="color:green">Outdoor Activities</h2>
+								</div>
+							</div>
+							<div class="tile">
+								<div class="tile-inner">
+								<img src="outdoor.jpg" style="width: 60%; border="0"; alt="Null";">
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-2" data-target="#tile-collapse-7" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">What outdoor activities do you enjoy the most?
+										</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-7">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Biking</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Hiking</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Horse-Riding</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Boating</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Camping</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Fishing</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Surfing</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Scuba Diving</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Rock-Climbing</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Shooting</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Lazer Tag</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Zip Lining</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Skiing</a></p>
+										</div>
+		
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-2" data-target="#tile-collapse-8" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">What mode of transportation do you mostly prefer?
+										</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-8">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Personal Car</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Bus</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Train</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Walk</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">MotorBike</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">BiCycle</a></p>
+										</div>
+		
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-2" data-target="#tile-collapse-9" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">With whom do you mostly holiday with?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-9">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Friends</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Wife</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Family</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Colleagues</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Pets</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Wife & Kids</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Everyone</a></p>
+										</div>
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Tile Parent 3-->
+						<div class="tile-wrap" id="tile-parent-3">
+							<div class="tile">
+								<div class="tile-inner">
+									<h2 style="color:green">Food & Drinks</h2>
+								</div>
+							</div>
+							<div class="tile">
+								<div class="tile-inner">
+								<img src="food.jpg" style="width: 60%; border="0"; alt="Null";">
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-3" data-target="#tile-collapse-10" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">Which is your favorite cuisine?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-10">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">Mexican</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">Chineese</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">Indian</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">American</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">Thai</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">Italian</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light" id="btn">Other</a></p>
+										</div>
+		
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-3" data-target="#tile-collapse-11" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">What kind of restaurants do you look for?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-11">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">A pub or sidewalk cafe</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Family type restaurent</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">A romantic dining place</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Ski Lodge</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Room Service</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Motel</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Fast Food</a></p>
+										</div>
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="tile tile-collapse">
+								<div class="tile-toggle" data-parent="#tile-parent-3" data-target="#tile-collapse-12" data-toggle="tile">
+									<div class="pull-left tile-side">
+										<div class="avatar avatar-green avatar-sm">
+											<span class="icon icon-launch"></span>
+										</div>
+									</div>
+									<div class="tile-inner">
+										<div class="text-overflow">What are your favourite drinks?</div>
+									</div>
+								</div>
+								<div class="tile-active-show collapse" id="tile-collapse-12">
+									<div class="tile-sub">
+										</br>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Fruit Drinks</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Coffee</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Mocktails</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Cocktails</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Beer</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Wine</a></p>
+										</div>
+										<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+										<p class="margin-no-top"><a class="btn btn-yellow waves-button waves-effect waves-light">Whisky</a></p>
+										</div>
+									</div>
+									<div class="tile-footer">
+										<ul class="nav nav-list pull-left">
+											<li>
+												<a href="javascript:void(0)"><span class="icon icon-check"></span>&nbsp;Save</a>
+											</li>
+											<li>
+												<a data-dismiss="tile" href="javascript:void(0)"><span class="icon icon-close"></span>&nbsp;Cancel</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="tab-pane fade" id="third-tab">
 						<p>This is the my review tab</p>
@@ -534,7 +1047,7 @@
 </div>
 <footer class="footer">
 		<div class="container">
-			<p>Lets Go!!</p>
+			<p>Letz Go!!</p>
 		</div>
 </footer>
 
@@ -550,16 +1063,15 @@
 					<div class="col-lg-4 col-sm-6">
 							<div class="card">
 								<aside class="card-main">
-									<div class=" card-img">
+									<div class="card-img">
 										<img alt="alt text" src="images/users/avatar-001.jpg">
 									</div>
 								</aside>
 							</div>
 					</div>
 					<div class="col-lg-4 col-sm-6">
-
-										<a class="btn btn-flat btn-blue waves-button waves-effect"><span class="icon icon-create"> Change Image</span></a>
-										<a class="btn btn-flat btn-red waves-button waves-effect"><span class="icon icon-delete"> Remove Image</span></a>
+							<a class="btn btn-flat btn-blue waves-button waves-effect"><span class="icon icon-create"> Change Image</span></a>
+							<a class="btn btn-flat btn-red waves-button waves-effect"><span class="icon icon-delete"> Remove Image</span></a>
 					</div>
 				</div>
 				<div class="modal-footer">
