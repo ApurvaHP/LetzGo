@@ -11942,8 +11942,3 @@ opacity
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-.tab-content.active { display: block } 
-.tab-content { display: none } 
-.morecontent span {display: none;} 
-.morelink {display: block;}
