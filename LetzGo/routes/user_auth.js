@@ -89,10 +89,11 @@ router.post('/signup', function(req, res) {
 		//console.log("Inside cpool");
 		var input = JSON.parse(JSON.stringify(req.body));
 		console.log(input);
-		var queryString = 'SELECT * FROM users where username = "' + input.username
-				+ '" AND password = "' + input.password + '"';
+		
+		//var queryString = "INSERT INTO users set ? ";
+		
 		//console.log(queryString);
-		connection.query(queryString, function(err, rows) {
+		var query = connection.query("INSERT INTO users set ? ", input, function(err, rows) {
 			//console.log(input);
 			if (err){
 				console.log("Error Selecting : %s ", err);
