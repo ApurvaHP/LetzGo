@@ -18,4 +18,10 @@ router.get('/settings', function(req, res, next) {
 	  res.render('settings', { title: 'LetzGO - Settings', uname: uname });
 	});
 
+router.get('/attractions', function(req, res, next) {
+	var sess = req.session;
+	var uname = sess.username;
+	  res.render('attractions', { title: 'LetzGO - Local Attractions', uname: uname });
+	});
+
 module.exports = router;
