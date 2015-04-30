@@ -64,6 +64,8 @@
 			box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
 		}
 	</style>
+	<link href="css/simplePagination.css" type="text/css" rel="stylesheet"/>
+	
 
 </head>
 <body style="margin-bottom: 73px;">
@@ -78,7 +80,7 @@
 						</a>
 					</li>
 				</ul>
-				<a class="header-logo" href="/index"><span><img src="./images/logoInline.png">Letz Go!!</a>
+				<a class="header-logo" href="/"><span><img src="./images/logoInline.png">Letz Go!!</a>
 			</div>
 			<div class="clearfix pull-right">
 				<ul class="nav nav-list pull-right">
@@ -197,12 +199,330 @@
 				<div class="tab-content">
 					<div class="tab-pane fade active in" id="first-tab">
 						<p>This is the my information tab</p>
+						<form name="htmlform" method="post" action="">
+						<div id="left-div">
+							<span><img style="height: 150px; line-height: 36px; margin-bottom: -6px; margin-top: -6px; margin-left: 4%; width: 150px; border-radius: 50%;" alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+							<span><h5 style="margin-left: 7%; margin-top: 2%;">San Jose, CA</h5></span>
+						</div>
+						<div id="center-content-div" style="margin-left: 36%; margin-top: -20%;">
+
+							<span><h2 style="color:green">Prachi Jain</h3></span><br>
+							<span><p style="font-size: 14px; font-style: italic; margin-left: 2%; margin-top: -7%;">jainprachi.55@gmail.com</p></span><br>
+							<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Birthday:</label> 25th June</span><br>
+							<span style="font-style: italic;"><label style="font-style: normal; font-weight: bold; color:green;">Phone:</label> 999-999-9999</span>
+						</div>
+						<button class="btn btn-flat btn-alt icon icon-edit" data-toggle="modal" href="#modal" type="button" style="font-size: 14px; margin-left: 66%;">Edit Profile</button>
+						<hr style="margin-left: -12%;margin-right: 18%; position: relative;">
+					</form>
+					<div aria-hidden="true" class="modal fade" id="modal" role="dialog" tabindex="-1">
+						<div class="modal-dialog modal-xs">
+							<div class="modal-content">
+								<div class="modal-heading">
+									<a class="modal-close" data-dismiss="modal">&times;</a>
+									<h2 class="modal-title">Edit User Profile</h2>
+								</div>
+								<div class="modal-inner">
+									<div class="form-group form-group-label form-group-green">
+										<div class="row">
+											<div class="col-lg-6 col-sm-8">
+												<label class="floating-label" for="float-text-green">First Name</label>
+												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-group-label form-group-green">
+										<div class="row">
+											<div class="col-lg-6 col-sm-8">
+												<label class="floating-label" for="float-text-green">Last Name</label>
+												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+											</div>
+										</div>
+									</div>
+									<div class="form-group-green form-group">
+										<div class="col-lg-2 col-md-3 col-sm-4">
+											<label class="form-label" style="margin-left: -47%;">Gender</label>
+										</div>
+										<div class="radio radio-adv radio-inline">
+											<label for="input-radio-inline-1">
+												<input class="access-hide" id="input-radio-inline-1" name="input-radio-inline" type="radio">Female
+											</label>
+										</div>
+										<div class="radio radio-adv radio-inline">
+											<label for="input-radio-inline-2">
+												<input class="access-hide" id="input-radio-inline-2" name="input-radio-inline" type="radio">Male
+											</label>
+										</div>
+									</div>
+									<div class="form-group form-group-green">
+										<div class="row">
+											<div class="col-lg-2 col-md-3 col-sm-4">
+												<label class="form-label" for="datepicker-adv-1" style="margin-left: -19%;">Birthday</label>
+											</div>
+											<div class="col-lg-4 col-md-6 col-sm-8" style="width: 81%; margin-left: -7%;">
+												<input class="datepicker-adv datepicker-adv-default form-control" id="datepicker-adv-1" type="text">
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-group-label form-group-green">
+										<div class="row">
+											<div class="col-lg-6 col-sm-8">
+												<label class="floating-label" for="float-text-green">Email</label>
+												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-group-label form-group-green">
+										<div class="row">
+											<div class="col-lg-6 col-sm-8">
+												<label class="floating-label" for="float-text-green">Phone</label>
+												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-group-label form-group-green">
+										<div class="row">
+											<div class="col-lg-6 col-sm-8">
+												<label class="floating-label" for="float-text-green">My City</label>
+												<input class="form-control" id="float-text-green" type="text" style="width: 155%;">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<p class="text-right"><button class="btn btn-flat btn-alt icon icon-clear" data-dismiss="modal" type="button" style="margin-right: -8%;">Close</button><button class="btn btn-flat btn-alt icon icon-done" data-dismiss="modal" type="button">Save</button></p>
+								</div>
+							</div>
+						</div>
+					</div>
 					</div>
 					<div class="tab-pane fade" id="second-tab">
 						<p>This is the my interests tab</p>
 					</div>
 					<div class="tab-pane fade" id="third-tab">
 						<p>This is the my review tab</p>
+						<table id="content">
+						<tbody>
+						<tr>
+							<td>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:12%;" src="ragingEdited.jpg">
+													</picture>
+													<h5>Raging Waters </br>San Jose</h5>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner"> 
+													<p class="card-heading" style="font-size: 18px;">A Great Way To Cool Off!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.</br>We all had a great time. The park food is normal fare and what you would expect at an attraction park but they did have some healthier options which were nice to have. I give this a 4 instead of a 5 because I think the food could be improved upon. </br>The park was crowded but we expected it to be. We also liked the locker rentals. Next time we are in town over the summer we will visit the park again.
+													</div>
+												</div>
+												<div class="card-action">
+													<ul class="nav nav-list pull-left">
+												<li>
+												<a href="javascript:void(0)"><span class=""></span>&nbsp;</a>
+												</li>
+												</ul>
+												<ul class="nav nav-list pull-right">
+												<li class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown"><span class="access-hide">More</span><span class="icon icon-keyboard-arrow-down"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-mode-edit btn-yellow btn waves-button waves-effect" data-toggle="modal" href="#modal1">&nbsp;Edit</span></a>
+													</li>
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-clear btn btn-yellow waves-button waves-effect">&nbsp;Clear</span></a>
+													</li>
+
+												</ul>
+												</li>
+												</ul>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</td>
+								</tr>
+								<tr>
+									<td>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:12%;" src="ragingEdited.jpg">
+													</picture>
+													<h5>Raging Waters </br>San Jose</h5>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner"> 
+													<p class="card-heading" style="font-size: 18px;">A Great Way To Cool Off!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.</br>We all had a great time. The park food is normal fare and what you would expect at an attraction park but they did have some healthier options which were nice to have. I give this a 4 instead of a 5 because I think the food could be improved upon. </br>The park was crowded but we expected it to be. We also liked the locker rentals. Next time we are in town over the summer we will visit the park again.
+													</div>
+												</div>
+												<div class="card-action">
+													<ul class="nav nav-list pull-left">
+												<li>
+												<a href="javascript:void(0)"><span class=""></span>&nbsp;</a>
+												</li>
+												</ul>
+												<ul class="nav nav-list pull-right">
+												<li class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown"><span class="access-hide">More</span><span class="icon icon-keyboard-arrow-down"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-mode-edit btn-yellow btn waves-button waves-effect" data-toggle="modal" href="#modal1">&nbsp;Edit</span></a>
+													</li>
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-clear btn btn-yellow waves-button waves-effect">&nbsp;Clear</span></a>
+													</li>
+
+												</ul>
+												</li>
+												</ul>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:12%;" src="ragingEdited.jpg">
+													</picture>
+													<h5>Raging Waters </br>San Jose</h5>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner"> 
+													<p class="card-heading" style="font-size: 18px;">Hello this is 3rd tile!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.</br>We all had a great time. The park food is normal fare and what you would expect at an attraction park but they did have some healthier options which were nice to have. I give this a 4 instead of a 5 because I think the food could be improved upon. </br>The park was crowded but we expected it to be. We also liked the locker rentals. Next time we are in town over the summer we will visit the park again.
+													</div>
+												</div>
+												<div class="card-action">
+													<ul class="nav nav-list pull-left">
+												<li>
+												<a href="javascript:void(0)"><span class=""></span>&nbsp;</a>
+												</li>
+												</ul>
+												<ul class="nav nav-list pull-right">
+												<li class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown"><span class="access-hide">More</span><span class="icon icon-keyboard-arrow-down"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-mode-edit btn-yellow btn waves-button waves-effect" data-toggle="modal" href="#modal1">&nbsp;Edit</span></a>
+													</li>
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-clear btn btn-yellow waves-button waves-effect">&nbsp;Clear</span></a>
+													</li>
+
+												</ul>
+												</li>
+												</ul>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<div>
+										<div class="card card-alt">
+											<a class="card-side" href="javascript:void(0)">
+												<span class="card-heading">
+													<picture> <img style ="max-width: 50%;
+	    											height: auto; background-repeat: no-repeat; background-position: 50%; border-radius: 60%; align:center; margin-left:12%;" src="ragingEdited.jpg">
+													</picture>
+													<h5>Raging Waters </br>San Jose</h5>
+												</span>
+											</a>
+											<div class="card-main">
+												<div class="card-inner"> 
+													<p class="card-heading" style="font-size: 18px;">Hello this is 4th tile!</p>
+													<div class="more" style="font-size:14px;">
+														We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.</br>We all had a great time. The park food is normal fare and what you would expect at an attraction park but they did have some healthier options which were nice to have. I give this a 4 instead of a 5 because I think the food could be improved upon. </br>The park was crowded but we expected it to be. We also liked the locker rentals. Next time we are in town over the summer we will visit the park again.
+													</div>
+												</div>
+												<div class="card-action">
+													<ul class="nav nav-list pull-left">
+												<li>
+												<a href="javascript:void(0)"><span class=""></span>&nbsp;</a>
+												</li>
+												</ul>
+												<ul class="nav nav-list pull-right">
+												<li class="dropdown">
+												<a class="dropdown-toggle" data-toggle="dropdown"><span class="access-hide">More</span><span class="icon icon-keyboard-arrow-down"></span></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-mode-edit btn-yellow btn waves-button waves-effect" data-toggle="modal" href="#modal1">&nbsp;Edit</span></a>
+													</li>
+													<li>
+														<a href="javascript:void(0)"><span class="icon icon-clear btn btn-yellow waves-button waves-effect">&nbsp;Clear</span></a>
+													</li>
+
+												</ul>
+												</li>
+												</ul>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									</td>
+								</tr>
+							</tbody>
+							</table>
+
+
+
+					
+<!--Modal Page on Edit Review-->
+				<div aria-hidden="true" class="modal fade" id="modal1" role="dialog" tabindex="-1">
+					<div class="modal-dialog modal-xs">
+						<div class="modal-content">
+							<div class="modal-heading">
+								<a class="modal-close" data-dismiss="modal">&times;</a>
+								<div class="form-group form-group-label form-group-green">
+										<div class="row">
+											<div class="col-lg-6 col-sm-8">
+												<label class="floating-label" for="float-text-green">Title</label>
+												<input class="form-control modal-title" id="float-text-green" type="text" placeholder="title" style="width: 155%;">
+											</div>
+										</div>
+									</div>
+
+							</div>
+
+							<div class="modal-inner">
+							<textarea rows="7" cols="40">
+							We loved the water park, it was the perfect way to cool off during a hot summer day! We loved how they had a ton of rides to choose from, and a large wave pool. The kids had a blast not only in their area but also on the adult rides.
+							We all had a great time. The park food is normal fare and what you would expect at an attraction park but they did have some healthier options which were nice to have. I give this a 4 instead of a 5 because I think the food could be improved upon.
+							The park was crowded but we expected it to be. We also liked the locker rentals. Next time we are in town over the summer we will visit the park again.
+							</textarea>
+							</div>
+							<div class="modal-footer">
+								<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+							</div>
+					</div>
+				</div>
+			</div>
+				<div id="pagination"></div>
 					</div>
 				</div>
 			</div>
@@ -252,5 +572,105 @@
 
 
 <script src="js/base.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.simplePagination.js"></script>
+<script>
+		$('#tabs li').click(function() {
+			$('#tabs .active').removeClass('active');
+			var tab = $(this).addClass('active').data('tab-content');
+			$('.tab-content.active').removeClass('active');
+			$('.tab-content[data-tab-content='+tab+']').addClass('active');
+	});
+
+	$('.btn').click(function() {
+			$(this).toggleClass('btn-yellow');
+			$(this).toggleClass('btn-green');
+	});
+
+	$(document).ready(function() {
+		// Configure/customize these variables.
+				var showChar = 100;  // How many characters are shown by default
+			var ellipsestext = "...";
+			var moretext = "Read more";
+			var lesstext = "Read less";
+
+
+		$('.more').each(function() {
+				var content = $(this).html();
+
+				if(content.length > showChar) {
+
+						var c = content.substr(0, showChar);
+						var h = content.substr(showChar, content.length - showChar);
+
+						var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+						$(this).html(html);
+				}
+
+		});
+		$(".morelink").click(function(){
+				if($(this).hasClass("less")) {
+						$(this).removeClass("less");
+						$(this).html(moretext);
+				} else {
+						$(this).addClass("less");
+						$(this).html(lesstext);
+				}
+				$(this).parent().prev().toggle();
+				$(this).prev().toggle();
+				return false;
+			});
+	});
+
+	 jQuery(function($) {
+                // i've got a little refreshed notice in there - remove it after a second
+                setTimeout(function() { $("#refreshed").remove(); }, 1000);
+                var items = $("#content tbody tr");
+                var numItems = items.length;
+                var perPage = 2;
+                // only show the first 2 (or "first per_page") items initially
+                items.slice(perPage).hide();
+                // now setup pagination
+                $("#pagination").pagination({
+                    items: numItems,
+                    itemsOnPage: perPage,
+                    cssStyle: "light-theme",
+                    onPageClick: function(pageNumber) { // this is where the magic happens
+                        // someone changed page, lets hide/show trs appropriately
+                        var showFrom = perPage * (pageNumber - 1);
+                        var showTo = showFrom + perPage;
+                        items.hide() // first hide everything, then show for the new page
+                             .slice(showFrom, showTo).show();
+                    }
+                });
+                // next we'll create a function to check the url fragment and change page if necessary
+                // we're storing this function in a variable so we can reuse it
+                var checkFragment = function() {
+                    // if there's no hash, make sure we go to page 1
+                    var hash = window.location.hash || "#page-1";
+                    // we'll use regex to check the hash string as follows:
+                    // ^            strictly from the beginning of the string (i.e. succeed "#page-3" but fail "hi!#page-3")
+                    // #page-       exactly match the text "#page-"
+                    // (            start a matching group (so we can access what's in these parentheses on their own)
+                    //      \d      any digit ([0-9])
+                    //      +       one or more of the previous literal (one or more digits)
+                    // )            end the matching group
+                    // $            we should now be at the end of the string - if not, then don't match (i.e. fail "#page-3hi!")
+                    hash = hash.match(/^#page-(\d+)$/);
+                    if(hash)
+                        // the selectPage function is one of many described in the documentation
+                        // we've captured the page number in a regex group: (\d+)
+                        $("#pagination").pagination("selectPage", parseInt(hash[1]));
+                };
+                // we'll call this function whenever the back or forward buttons are pressed
+                // thanks to mike o'connor for highlighting the need for this
+                $(window).bind("popstate", checkFragment);
+                
+                // and we'll also call it to check right now!
+                checkFragment();
+            });
+
+</script>
 	</body>
 	</html>
