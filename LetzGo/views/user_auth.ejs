@@ -67,7 +67,6 @@
 
 </head>
 <body style="margin-bottom: 73px;">
-
 				<header class="header">
 					<div class="clearfix pull-left">
 						<ul class="nav nav-list pull-left">
@@ -79,7 +78,7 @@
 								</a>
 							</li>
 						</ul>
-						<a class="header-logo" href="index.html"><span><img src="./images/logoInline.png">Lets Go!!</a>
+						<a class="header-logo" href="/index"><span><img src="./images/logoInline.png">Letz Go!!</a>
 					</div>
 					<div class="clearfix pull-right">
 						<ul class="nav nav-list pull-right">
@@ -174,8 +173,6 @@
 			</div>
 		</div>
 	</nav>
-
-
 	<div class="content">
 						<div class="content-heading">
 							<div class="container">
@@ -301,16 +298,20 @@
 																<img alt="Login" src="images/users/quill-1-new.jpg">
 															</span>
 														</p>
-														<form class="form" action="index.html">
+														<form class="form" method="POST" id="signup-form" action="/signup">
 															<div class="form-group form-group-label">
 																<div class="row">
-																	<div class="col-md-10 col-md-push-1" style="width:41.5%;">
+																	<div class="col-md-10 col-md-push-1">
 																		<label class="floating-label" for="signup-firstname">First Name</label>
-																		<input class="form-control" id="signup-firstname" type="text" required>
+																		<input class="form-control" id="signup-firstname" name="firstname" type="text" required>
 																	</div>
-																	<div class="col-md-10 col-md-push-1" style="width:41.5%;">
+																</div>
+															</div>
+															<div class="form-group form-group-label">
+																<div class="row">
+																	<div class="col-md-10 col-md-push-1">
 																		<label class="floating-label" for="signup-lastname">Last Name</label>
-																		<input class="form-control" id="signup-lastname" type="text" required>
+																		<input class="form-control" id="signup-lastname" name="lastname" type="text" required>
 																	</div>
 																</div>
 															</div>
@@ -318,7 +319,7 @@
 																<div class="row">
 																	<div class="col-md-10 col-md-push-1">
 																		<label class="floating-label" for="signup-city">Your City</label>
-																		<input class="form-control" id="signup-city" type="text" required>
+																		<input class="form-control" id="signup-city"  name="city" type="text" required>
 																	</div>
 																</div>
 															</div>
@@ -326,7 +327,7 @@
 																<div class="row">
 																	<div class="col-md-10 col-md-push-1">
 																		<label class="floating-label" for="signup-email">Your Email</label>
-																		<input class="form-control" id="signup-email" type="email" required>
+																		<input class="form-control" id="signup-email" name="email" type="email" required>
 																	</div>
 																</div>
 															</div>
@@ -334,7 +335,7 @@
 																<div class="row">
 																	<div class="col-md-10 col-md-push-1">
 																		<label class="floating-label" for="signup-password">New Password</label>
-																		<input class="form-control" id="signup-password" type="password" required>
+																		<input class="form-control" id="signup-password" name="password" type="password" required>
 																	</div>
 																</div>
 															</div>
@@ -342,7 +343,7 @@
 																<div class="row">
 																	<div class="col-md-10 col-md-push-1">
 																		<label class="floating-label" for="signup-username">Select a Username</label>
-																		<input class="form-control" id="signup-username" type="text" required>
+																		<input class="form-control" id="signup-username" name="username" type="text" required>
 																	</div>
 																</div>
 															</div>
@@ -365,7 +366,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="form-group form-group-label">
+															<!--<div class="form-group form-group-label">
 																<div class="row">
 																	<div class="col-md-10 col-md-push-1" style="padding:0; width:100%;">
 																		<div class="col-lg-2 col-md-3 col-sm-4" style="padding:0;">
@@ -376,7 +377,7 @@
 																		</div>
 																	</div>
 																</div>
-															</div>
+															</div>-->
 															<div class="form-group">
 																<div class="row">
 																	<div class="col-md-10 col-md-push-1">

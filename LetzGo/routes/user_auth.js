@@ -16,7 +16,7 @@ connectionpool = mysql.createPool({
 });
 
 
-/* GET login page. */
+/* GET login-signup page. */
 router.get('/login', function(req, res, next) {
 	var sess = req.session;
 	if(sess.user == null || sess.user == ""){
@@ -44,17 +44,24 @@ router.post('/login', function(req, res) {
 		//console.log(queryString);
 		connection.query(queryString, function(err, rows) {
 			//console.log(input);
-			if (err)
+			if (err){
 				console.log("Error Selecting : %s ", err);
-			for ( var i in rows) {
-				if (i == 0) {
-					sess.user = rows[i];
-					console.log(sess.user);
-					res.redirect('/profile');
-				}
-				else{
-					sess.login = 0;
-					res.redirect('/login');
+				sess.login = 0;
+				sess.user = "";
+				res.redirect('/login');
+			}
+			else{
+				for ( var i in rows) {
+					if (i == 0) {
+						sess.user = rows[i];
+						console.log(sess.user);
+						res.redirect('/profile');
+					}
+					else{
+						sess.login = 0;
+						sess.user = "";
+						res.redirect('/login');
+					}
 				}
 			}
 			connection.release();
@@ -72,6 +79,43 @@ router.get('/logout', function(req, res) {
 			//console.log(req.session.username);
 			res.redirect('/login');
 		}
+	});
+});
+
+/*For user signup*/
+router.post('/signup', function(req, res) {
+	var sess = req.session;
+	connectionpool.getConnection(function(err, connection) {
+		//console.log("Inside cpool");
+		var input = JSON.parse(JSON.stringify(req.body));
+		console.log(input);
+		var queryString = 'SELECT * FROM users where username = "' + input.username
+				+ '" AND password = "' + input.password + '"';
+		//console.log(queryString);
+		connection.query(queryString, function(err, rows) {
+			//console.log(input);
+			if (err){
+				console.log("Error Selecting : %s ", err);
+				sess.login = 0;
+				sess.user = "";
+				res.redirect('/login');
+			}
+			else{
+				for ( var i in rows) {
+					if (i == 0) {
+						sess.user = rows[i];
+						console.log(sess.user);
+						res.redirect('/profile');
+					}
+					else{
+						sess.login = 0;
+						sess.user = "";
+						res.redirect('/login');
+					}
+				}
+			}
+			connection.release();
+		});
 	});
 });
 
