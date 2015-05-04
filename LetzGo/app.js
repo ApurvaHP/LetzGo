@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,12 +9,6 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var mysql = require('mysql');
 var session = require('express-session');
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var user_auth = require('./routes/user_auth');
-var profile = require('./routes/profile');
-var attractions = require('./routes/attractions');
 
 var app = express();
 
@@ -34,10 +30,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var routes = require('./routes/index');
+var users = require('./routes/users');
+var user_auth = require('./routes/user_auth');
+var profile = require('./routes/profile');
+var attractions = require('./routes/attractions');
+
+
 app.use('/', routes);
 app.use('/', user_auth);
 app.use('/', profile);
-app.use('/',attractions);
+app.use('/attractions',attractions);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
