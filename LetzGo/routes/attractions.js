@@ -44,7 +44,7 @@ router.get('/:name', function(req, res, next) {
 			}
 			else{
 				for ( var i in rows) {
-					console.log(rows);
+					//console.log(rows);
 					if (i == 0) {
 						//res.render('attractions', { title: 'LetzGO - Local Attractions', data: rows });
 						var q2 = 'SELECT r.id, u.username as user, u.city as city, a.name as attraction, r.date, r.title, r.description, r.rating FROM reviews r'
@@ -60,9 +60,27 @@ router.get('/:name', function(req, res, next) {
 							}
 							else{
 								//for ( var i in rows1) {
-									console.log(rows1);
+								//console.log(rows[0]);
+								console.log(rows1);
+								if(rows[0].address2 == null){
+									rows[0].address2 = '';
+								}else{
+									rows[0].address2 = ', '+rows[0].address2;
+								}
+								
+								if(rows[0].banner != null){
+									//var bannerText = '<img alt="alt text" src="'+rows[0].banner+'">';
+									var bannerText = rows[0].banner;
+									rows[0].banner = bannerText;
+								}else{
+									//var bannerText = '<img alt="alt text" src="../images/samples/noBanner.jpg">';
+									var bannerText = '../images/samples/noBanner.jpg';
+									rows[0].banner = bannerText;
+								}
+								console.log(rows[0].banner);
+								
 									//if (i == 0) {
-										res.render('attractions', { title: rows[0].name, atrData: rows, atrReviewsData: rows1 });
+								res.render('attractions', { title: rows[0].name, atrData: rows[0], atrReviewsData: rows1 });
 									//}
 								//}
 							}

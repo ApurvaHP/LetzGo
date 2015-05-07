@@ -75,7 +75,7 @@
 					</a>
 				</li>
 			</ul>
-			<a class="header-logo" href="index.html"><span><img src="../images/logoInline.png"><%= title%></a>
+			<a class="header-logo" href="index.html"><span><img src="../images/logoInline.png">Letz GO!!</a>
 		</div>
 		<div class="clearfix pull-right">
 			<ul class="nav nav-list pull-right">
@@ -208,7 +208,7 @@
 	<div class="content">
 		<div class="content-heading">
 			<div class="container">
-				<h1 class="heading">Fixed Left/Right Hand Side Column</h1>
+				<h1 class="heading"><%= title%></h1>
 			</div>
 		</div>
 		<div class="content-inner">
@@ -221,13 +221,13 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-img">
-									<img alt="alt text" src="../images/samples/raging2.jpg">
+									<img alt="alt text" id="imgBanner" name="imgBanner" src="">
 										<div class="container">
 										<aside class="card-img-heading"><h3 style="font-style: italic"></h3><span >
 										<p>
-											<span class="icon icon-place">&nbsp;</span>2333 South White Road, San Jose, CA 95148<br>
-											<label style="font-weight: bold;">&nbsp;Phone:</label>&nbsp;(408)238-9900
-											<label style="font-weight: bold;">&nbsp;Fax:</label>&nbsp;(408) 270-2022<br>
+											<span class="icon icon-place">&nbsp;</span><%= (atrData.address1 + atrData.address2+ ', ' + atrData.city+ ', ' + atrData.state+ ' ' + atrData.zip)%><!--2333 South White Road, San Jose, CA 95148--><br>
+											<%if(atrData.fax != null) { %><label style="font-weight: bold;">&nbsp;Phone:</label>&nbsp;<%=atrData.phone%><%}%>
+											<%if(atrData.fax != null) { %><label style="font-weight: bold;">&nbsp;Fax:</label>&nbsp;<%=atrData.fax%><%}%><br/>
 											<span style="font-siz:14px; font-style:italic; align: right">154 reviews</span>
 										</p>
 									</aside>
@@ -237,7 +237,7 @@
 									<div class="card-inner">
 									<aside>	
 										<p>
-											Raging Waters San Jose is celebrating its 30th season as Northern California’s premier water park destination. Enjoy scenic panoramic views of Lake Cunningham and the San Jose Foothills, over a million gallons of water attractions, and 23-acres of family fun!						Raging Waters is one of the best places to visit in San Jose, CA! Our most popular family attractions include the 350,000-gallon Wave Pool, Endless River and Family Raft Ride. Thrill seekers can literally drop vertically from a trap floor on Bombs Away, race speed slides on White Lightening and Blue Thunder, and splash into the deep waters of Shotgun Falls. Two dedicated kiddie play areas feature waterfalls, tiny tot slides and zero depth entry zones.</p>
+											<%=atrData.description%></p>
 									</aside>
 									</div>
 									
@@ -449,6 +449,13 @@
         return false;
     });
 });
+      </script>
+      
+      <script>
+      var imgSpan = '<%=atrData.banner %>';
+      //imgSpan.innerHTML= ;
+       $("#imgBanner").attr("src", imgSpan);
+      //alert(imgSpan.innerHTML);
       </script>
 </body>
 </html>
