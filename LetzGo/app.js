@@ -39,9 +39,9 @@ var attractions = require('./routes/attractions');
 
 app.use('/', routes);
 app.use('/', user_auth);
-app.use('/', profile);
-app.use('/',attractions);
-app.use('/users', users);
+app.use('/users', profile);
+app.use('/attractions',attractions);
+app.use('/user', users);
 
 // catch 404 and forward to error handler
 app.use(function(err, req, res, next) {

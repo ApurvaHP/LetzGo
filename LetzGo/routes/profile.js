@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 
@@ -16,15 +18,35 @@ connectionpool = mysql.createPool({
 });
 
 
-/* GET login page. */
-router.get('/profile', function(req, res, next) {
-	res.render('profile', { title: 'My Profile'});
+router.get('/', function(req, res, next) {
+	var sess = req.session;
+	var uname = sess.username;
+	  res.render('profile', { title: 'LetzGO - User Profile', uname: uname });
 });
 
-/*router.get('/profile:id', function(req, res, next) {
-	var sess = req.session;
-	var id = req.param.id;
-	res.render('profile', { title: 'LetzGO - My Profile', uname: id });
-});*/
+
+router.get('/:username', function(req, res, next) {	
+	var username = req.param('username');
+	connectionpool.getConnection(function(err, connection) {
+		var queryString = 'SELECT * FROM users where username = "' + username + '"';
+		console.log(queryString);
+		connection.query(queryString, function(err, rows) {
+			//console.log(input);
+			if (err){
+				console.log("Error Selecting : %s ", err);
+				res.redirect('/error');
+			}
+			else{
+				for ( var i in rows) {
+					console.log(rows);
+					if (i == 0) {
+						res.render('profile', { title: 'LetzGO - User Profile', data: rows });
+					}
+				}
+			}
+			connection.release();
+		});
+	});
+});
 
 module.exports = router;

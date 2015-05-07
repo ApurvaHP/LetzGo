@@ -19,19 +19,15 @@ connectionpool = mysql.createPool({
 
 
 
-/*router.get('/attractions', function(req, res, next) {
+router.get('/', function(req, res, next) {
 	var sess = req.session;
 	var uname = sess.username;
 	  res.render('attractions', { title: 'LetzGO - Local Attractions', uname: uname });
-});*/
+});
 
 
 /* GET login-signup page. */
-router.get('/:name', function(req, res, next) {
-	//var sess = req.session;
-	//var str = sess.aurl;
-	//var str = "Essex-Property-Homes";
-		
+router.get('/:name', function(req, res, next) {	
 	var name = req.param('name');
 	var atrName = name.replace(/-/g, ' ');
 
