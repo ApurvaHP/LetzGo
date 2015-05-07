@@ -28,14 +28,15 @@ router.get('/', function(req, res, next) {
 
 /* GET login-signup page. */
 router.get('/:name', function(req, res, next) {	
-	var name = req.param('name');
+	//var name = req.param('name');
+	var name = req.params.name;
 	var atrName = name.replace(/-/g, ' ');
 
 	//aname = "Essex-Property-Homes";
 	connectionpool.getConnection(function(err, connection) {
-		var queryString = 'SELECT * FROM attractions where name = "' + atrName + '"';
-		console.log(queryString);
-		connection.query(queryString, function(err, rows) {
+		var q1 = 'SELECT * FROM attractions where name = "' + atrName + '"';
+		console.log(q1);
+		connection.query(q1, function(err, rows) {
 			//console.log(input);
 			if (err){
 				console.log("Error Selecting : %s ", err);
@@ -45,11 +46,32 @@ router.get('/:name', function(req, res, next) {
 				for ( var i in rows) {
 					console.log(rows);
 					if (i == 0) {
-						res.render('attractions', { title: 'LetzGO - Local Attractions', data: rows });
+						//res.render('attractions', { title: 'LetzGO - Local Attractions', data: rows });
+						var q2 = 'SELECT r.id, u.username as user, u.city as city, a.name as attraction, r.date, r.title, r.description, r.rating FROM reviews r'
+									+ ' inner join users u on r.user = u.id'
+										+ ' inner join attractions a on r.attraction = a.id'
+											+ ' where a.name ="' + atrName + '"';
+						console.log(q2);
+						connection.query(q2, function(err1, rows1) {
+							//console.log(input);
+							if (err1){
+								console.log("Error Selecting : %s ", err1);
+								res.redirect('/error');
+							}
+							else{
+								//for ( var i in rows1) {
+									console.log(rows1);
+									//if (i == 0) {
+										res.render('attractions', { title: rows[0].name, atrData: rows, atrReviewsData: rows1 });
+									//}
+								//}
+							}
+							connection.release();
+						});
 					}
 				}
 			}
-			connection.release();
+			//connection.release();
 		});
 	});
 });

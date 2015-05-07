@@ -26,7 +26,10 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/:username', function(req, res, next) {	
-	var username = req.param('username');
+	var sess = req.session;
+	var loggedinUser = sess.user;
+	console.log(loggedinUser);
+	var username = req.params.username;
 	connectionpool.getConnection(function(err, connection) {
 		var queryString = 'SELECT * FROM users where username = "' + username + '"';
 		console.log(queryString);
@@ -40,7 +43,7 @@ router.get('/:username', function(req, res, next) {
 				for ( var i in rows) {
 					console.log(rows);
 					if (i == 0) {
-						res.render('profile', { title: 'LetzGO - User Profile', data: rows });
+						res.render('profile', { title: 'LetzGO - User Profile', data: rows, currUser: loggedinUser });
 					}
 				}
 			}
