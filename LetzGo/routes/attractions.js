@@ -60,7 +60,7 @@ router.get('/:name', function(req, res, next) {
 							}
 							else{
 								//for ( var i in rows1) {
-								//console.log(rows[0]);
+								console.log(rows[0]);
 								console.log(rows1);
 								if(rows[0].address2 == null){
 									rows[0].address2 = '';

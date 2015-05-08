@@ -11,8 +11,8 @@
 	<style type="text/css">
 
 	#map-canvas {
-        width: 500px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
         box-shadow: 2px 2px 2px 2px #ababab;
       }
 
@@ -60,6 +60,11 @@
 }
 .tab-content.active { display: block } .tab-content { display: none } .tab-content.active { display: block } .tab-content { display: none } .morecontent span {display: none;} .morelink {display: block;}
 </style>
+
+
+      <!--<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>-->
+      <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	  <script src="../js/d3pie.min.js"></script>
 
 	
 </head>
@@ -228,7 +233,7 @@
 											<span class="icon icon-place">&nbsp;</span><%= (atrData.address1 + atrData.address2+ ', ' + atrData.city+ ', ' + atrData.state+ ' ' + atrData.zip)%><!--2333 South White Road, San Jose, CA 95148--><br>
 											<%if(atrData.fax != null) { %><label style="font-weight: bold;">&nbsp;Phone:</label>&nbsp;<%=atrData.phone%><%}%>
 											<%if(atrData.fax != null) { %><label style="font-weight: bold;">&nbsp;Fax:</label>&nbsp;<%=atrData.fax%><%}%><br/>
-											<span style="font-siz:14px; font-style:italic; align: right">154 reviews</span>
+											<span style="font-siz:14px; font-style:italic; align: right"><%=(atrData.rone + atrData.rtwo + atrData.rthree + atrData.rfour + atrData.rfive)%> reviews</span>
 										</p>
 									</aside>
 								</aside>
@@ -246,7 +251,7 @@
 						</div>
 
 					<!-- =================== -->
-
+					<div class="row">
 					<div class="col-lg-1 content-fix">
 						<div class="content-fix-scroll">
 							<div class="content-fix-wrap">
@@ -258,10 +263,12 @@
 										</div>
 										<div class="col-md-6" style=" overflow:hidden;">
 											<div class="card-main">
-												<div id="piechart_3d"></div>
+												<!--<div id="piechart_3d"></div>-->
+												<div id="pieChart"></div>
 											</div>
 										</div>
 							</div>
+						</div>
 						</div>									
 						<!-- ======================= -->
 
@@ -379,7 +386,7 @@
     <script>
       function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
-        var myLatlng = new google.maps.LatLng(37.3354, -121.8131);
+        var myLatlng = new google.maps.LatLng(<%=atrData.lat%>, <%=atrData.long%>);
         var mapOptions = {
           center: myLatlng,
           zoom: 8,
@@ -389,7 +396,7 @@
         var marker = new google.maps.Marker({
 	      position: myLatlng,
 	      map: map,
-	      title: 'Raging Waters San Jose'
+	      title: '<%=atrData.name%>' + ', ' +'<%=atrData.city%>' 
 	  	});
       }
       google.maps.event.addDomListener(window, 'resize', initialize);
@@ -457,5 +464,100 @@
        $("#imgBanner").attr("src", imgSpan);
       //alert(imgSpan.innerHTML);
       </script>
+      
+      
+      <script>
+var pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": '<%= atrData.name%>',
+			"fontSize": 22,
+			"font": "verdana"
+		},
+		"subtitle": {
+			"text": "The below are the user ratings so far for this attraction.",
+			"color": "#999999",
+			"fontSize": 10,
+			"font": "verdana"
+		},
+		"titleSubtitlePadding": 12
+	},
+	/*"footer": {
+		"text": "User Ratings so far!",
+		"color": "#000000",
+		"fontSize": 11,
+		"font": "open sans",
+		"location": "bottom-center"
+	},*/
+	"size": {
+		"canvasHeight": 400,
+		"canvasWidth": 400,
+		"pieOuterRadius": "80%"
+	},
+	"data": {
+		"content": [
+			{
+				"label": "Its a nightmare!",
+				"value": <%=atrData.rone%>,
+				"color": "#7e3838"
+			},
+			{
+				"label": "Duh!",
+				"value": <%=atrData.rtwo%>,
+				"color": "#7e6538"
+			},
+			{
+				"label": "I can live with it!",
+				"value": <%=atrData.rthree%>,
+				"color": "#7c7e38"
+			},
+			{
+				"label": "Nicccce!!!",
+				"value": <%=atrData.rfour%>,
+				"color": "#587e38"
+			},
+			{
+				"label": "It's Perfect!",
+				"value": <%=atrData.rfive%>,
+				"color": "#387e45"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "value"
+		},
+		"mainLabel": {
+			"font": "verdana"
+		},
+		"percentage": {
+			"color": "#e1e1e1",
+			"font": "verdana",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#e1e1e1",
+			"font": "verdana"
+		},
+		"lines": {
+			"enabled": true,
+			"color": "#cccccc"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 800,
+			"size": 16
+		}
+	}
+});
+</script>
 </body>
 </html>
