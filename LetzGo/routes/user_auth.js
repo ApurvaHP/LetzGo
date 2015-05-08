@@ -55,7 +55,7 @@ router.post('/login', function(req, res) {
 					if (i == 0) {
 						sess.user = rows[i];
 						console.log(sess.user);
-						if(input.login-remember == "on"){
+						if(input.remember == "on"){
 							sess.rem = "on";
 						}else{
 							sess.rem = null;

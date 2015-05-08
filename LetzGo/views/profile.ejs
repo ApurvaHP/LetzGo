@@ -85,6 +85,13 @@
 			<div class="clearfix pull-right">
 				<ul class="nav nav-list pull-right">
 					<li>
+						<a class="menu-toggle" href="#search">
+							<span class="access-hide">Search</span>
+							<span class="icon icon-search"></span>
+							<span class="header-close icon icon-close"></span>
+						</a>
+					</li>
+					<li>
 						<a class="menu-toggle" href="#profile">
 							<span class="access-hide">User</span>
 							<span class="avatar avatar-sm"><img alt="alt text for User avatar" src="../images/users/avatar-001.jpg"></span>
@@ -175,6 +182,60 @@
 			</div>
 		</div>
 	</nav>
+		<div class="menu menu-right menu-search" id="search">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-info">
+						<!--<form class="menu-top-form">-->
+							<label class="access-hide" for="menu-search">Search</label>
+							<input class="form-control form-control-inverse menu-search-focus" list="attractions" id="menuSearch" placeholder="Search" type="search">
+							<button type="submit" class="" onclick="search()">Search</button>
+						<!--</form>-->
+					</div>
+					<datalist id="attractions">
+					  <option value="Happy Hollow Park & Zoo">
+					  <option value="Raging Waters">
+					  <option value="The Jungle Island">
+					  <option value="California's Great America">
+					  <option value="Safari Run">
+					  <option value="Crema Coffee Roasting Co">
+					  <option value="Firehouse No1 Gastropub">
+					  <option value="Clover Bakery & Cafe">
+					  <option value="Cafe Stritch">
+					  <option value="The Tech Museum of Innovation">
+					  <option value="San Jose Museum of Art">
+					  <option value="Rosicrucian Egyptian Museum">
+					  <option value="Children's Discovery Museum">
+					  <option value="San Jose Institute of Contemporary Art">
+					  <option value="Arena Hotel">
+					  <option value="Madison Street Bed & Breakfast">
+					  <option value="Hotel Valencia Santana Row">
+					  <option value="Fairmont San Jose">
+					  <option value="Hampton Inn Hotel and Suites">
+					  <option value="Motel 6">
+					  <option value="The Alameda Motel">
+					  <option value="Super 8 Motel">
+					  <option value="Alura Inn">
+					  <option value="Hotel De Anza">
+					</datalist>
+				</div>
+				<div class="menu-content">
+					<div class="menu-content-inner">
+						<p><strong>Popular Search Queries:</strong></p>
+						<ul>
+							<li><a href="/attractions/Raging-Waters">Raging Waters</a></li>
+							<li><a href="/attractions/Safari-Run">Safari Run</a></li>
+							<li><a href="/attractions/Cafe-Stritch">Cafe Stritch</a></li>
+							<li><a href="/attractions/The-Jungle-Island">The Jungle Island</a></li>
+							<li><a href="/attractions/Arena-Hotel">Arena Hotel</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div class="content">
 		<div class="content-heading">
 			<div class="container">
@@ -1181,7 +1242,27 @@
                 // and we'll also call it to check right now!
                 checkFragment();
             });
+</script>
 
+<%if(0 == 1){%>
+
+
+
+<script type="text/javascript">
+	localStorage.setItem('<%=currUser.firstname%>', '<%= JSON.stringify(currUser)%>');
+</script>
+
+
+<%}%>
+
+<script type="text/javascript">
+function search(){
+	alert("hi");
+	var attraction = document.getElementById("menuSearch").value;
+	attraction = attraction.replace(/ /g,"-");
+	alert(attraction);
+	window.location.href = "/attractions/"+attraction;
+}	
 </script>
 	</body>
 	</html>
