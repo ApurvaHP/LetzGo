@@ -111,7 +111,7 @@ router.post('/signup', function(req, res) {
 					if (i == 0) {
 						sess.user = rows[i];
 						console.log(sess.user);
-						res.redirect('/profile');
+						res.redirect('/users/'+sess.user);
 					}
 					else{
 						sess.login = 0;

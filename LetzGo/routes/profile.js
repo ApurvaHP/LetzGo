@@ -18,11 +18,11 @@ connectionpool = mysql.createPool({
 });
 
 
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
 	var sess = req.session;
 	var uname = sess.username;
 	  res.render('profile', { title: 'LetzGO - User Profile', uname: uname });
-});
+});*/
 
 
 router.get('/:username', function(req, res, next) {	
