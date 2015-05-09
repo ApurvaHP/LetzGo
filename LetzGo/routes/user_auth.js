@@ -28,7 +28,7 @@ router.get('/login', function(req, res, next) {
 		}
 	}
 	else{
-		res.redirect('/profile');
+		res.redirect('/users/'+sess.user.username);
 	}
 });
 
@@ -111,7 +111,7 @@ router.post('/signup', function(req, res) {
 					if (i == 0) {
 						sess.user = rows[i];
 						console.log(sess.user);
-						res.redirect('/users/'+sess.user);
+						res.redirect('/users/'+sess.user.username);
 					}
 					else{
 						sess.login = 0;
